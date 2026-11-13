@@ -1,27 +1,34 @@
-/** Opaque reference to a location in the host document. Adapter-defined. */
-export type LocationRef = string;
-
+/** 宿主文档中一段文本（Word 里是一个段落）。ref 由适配器定义，对 core/UI 不透明。 */
 export interface TextSegment {
-  ref: LocationRef;
+  ref: string;
   text: string;
 }
 
-export interface HostCapabilities {
-  trackedReplace: boolean;
-  highlight: boolean;
-  comments: boolean;
-  selectionEvents: boolean;
+export type ScanScope = "document" | "selection";
+
+/** 定位一处问题所需的信息：段落引用 + 段落原文 + 原词 + 它是段内第几次出现。 */
+export interface IssueTarget {
+  ref: string;
+  segmentText: string;
+  sourceText: string;
+  occurrence: number;
 }
 
-export type ScanScope = "selection" | "document";
+export interface Replacement extends IssueTarget {
+  text: string;
+}
 
-/** Narrow interface the UI uses to talk to any host (Office.js, WPS, ...). */
+export interface ReplaceResult {
+  replaced: number;
+  /** 段落已被修改或找不到原词而跳过的数量，需要重新扫描。 */
+  skipped: number;
+}
+
+/** UI 与具体宿主（Word / Excel / WPS ...）之间的窄接口。 */
 export interface HostAdapter {
-  readonly capabilities: HostCapabilities;
-  readText(scope: ScanScope): Promise<TextSegment[]>;
-  select(ref: LocationRef, start: number, end: number): Promise<void>;
-  replace(ref: LocationRef, start: number, end: number, text: string): Promise<void>;
-  mark(ref: LocationRef, start: number, end: number): Promise<void>;
-  clearMarks(): Promise<void>;
-  onSelectionChanged(cb: () => void): () => void;
+  readonly name: string;
+  readSegments(scope: ScanScope): Promise<TextSegment[]>;
+  /** 在文档中选中并滚动到该处。 */
+  reveal(target: IssueTarget): Promise<void>;
+  replace(replacements: Replacement[]): Promise<ReplaceResult>;
 }

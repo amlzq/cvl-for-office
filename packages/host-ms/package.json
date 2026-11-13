@@ -1,6 +1,6 @@
 {
   "name": "@cvl/host-ms",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "config": {
     "app_to_debug": "word",
@@ -22,13 +22,13 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "@fluentui/react-components": "^9.55.1",
-    "@fluentui/react-icons": "^2.0.264",
     "core-js": "^3.36.0",
     "es6-promise": "^4.2.8",
     "react": "~19.2.4",
     "react-dom": "~19.2.4",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "@cvl/core": "*",
+    "@cvl/ui": "*"
   },
   "devDependencies": {
     "@babel/core": "^8.0.1",

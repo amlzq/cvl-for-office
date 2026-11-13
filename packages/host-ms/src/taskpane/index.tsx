@@ -1,27 +1,11 @@
-import * as React from "react";
+/* global document, Office */
 import { createRoot } from "react-dom/client";
-import App from "./components/App";
-import { FluentProvider, webLightTheme } from "@fluentui/react-components";
+import { App } from "@cvl/ui";
+import { wordAdapter } from "../word/adapter";
 
-/* global document, Office, module, require, HTMLElement */
-
-const title = "Contoso Task Pane Add-in";
-
-const rootElement: HTMLElement | null = document.getElementById("container");
-const root = rootElement ? createRoot(rootElement) : undefined;
-
-/* Render application after Office initializes */
 Office.onReady(() => {
-  root?.render(
-    <FluentProvider theme={webLightTheme}>
-      <App title={title} />
-    </FluentProvider>
-  );
+  const container = document.getElementById("container");
+  if (container) {
+    createRoot(container).render(<App host={wordAdapter} />);
+  }
 });
-
-if ((module as any).hot) {
-  (module as any).hot.accept("./components/App", () => {
-    const NextApp = require("./components/App").default;
-    root?.render(NextApp);
-  });
-}

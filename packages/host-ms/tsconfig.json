@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "ES2020",
     "moduleResolution": "bundler",
     "noImplicitReturns": true,
@@ -13,17 +11,17 @@
     "sourceMap": true,
     "target": "es6",
     "lib": [
-      "es7",
+      "es2020",
       "dom"
-    ],
+    ]
   },
   "exclude": [
     "node_modules"
   ],
-  "ts-node": { 
+  "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
     },
-    "files": true 
+    "files": true
   }
 }
