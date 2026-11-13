@@ -1,5 +1,6 @@
 import { detectText } from "./detect";
-import type { IssueTarget, TextSegment } from "./host";
+import type { UserDictionary } from "./dictionary";
+import type { IssueTarget, SegmentArea, TextSegment } from "./host";
 import type { DetectSettings, Issue } from "./types";
 
 export interface LocatedIssue extends IssueTarget {
@@ -8,6 +9,7 @@ export interface LocatedIssue extends IssueTarget {
   /** 与位置无关的稳定标识，用于「忽略」：规则 + 原词 + 前后各 3 个字。 */
   ignoreKey: string;
   issue: Issue;
+  area: SegmentArea;
   /** 问题前后的上下文，用于列表展示。 */
   before: string;
   after: string;
@@ -43,11 +45,12 @@ export function scanSegments(
   segments: TextSegment[],
   settings: DetectSettings,
   ignored: ReadonlySet<string> = new Set(),
+  dictionary?: UserDictionary,
 ): LocatedIssue[] {
   const result: LocatedIssue[] = [];
 
   for (const segment of segments) {
-    for (const issue of detectText(segment.text, settings)) {
+    for (const issue of detectText(segment.text, settings, dictionary)) {
       // Word 的 search() 把 ^ 当作特殊字符，且单次查找最长 255 字符；这类情况无法可靠定位，跳过。
       if (issue.sourceText.includes("^") || issue.sourceText.length > 255) {
         continue;
@@ -74,6 +77,7 @@ export function scanSegments(
         sourceText: issue.sourceText,
         occurrence,
         issue,
+        area: segment.area ?? "body",
         before: segment.text.slice(Math.max(0, issue.start - CONTEXT), issue.start),
         after: segment.text.slice(issue.end, issue.end + CONTEXT),
       });

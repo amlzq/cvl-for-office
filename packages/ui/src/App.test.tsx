@@ -8,6 +8,8 @@ const fakeHost: HostAdapter = {
   readSegments: async () => [{ ref: "p:0", text: "请使用软件" }],
   reveal: async () => {},
   replace: async () => ({ replaced: 0, skipped: 0 }),
+  mark: async () => 0,
+  clearMarks: async () => 0,
 };
 
 describe("App", () => {
@@ -16,6 +18,8 @@ describe("App", () => {
     expect(html).toContain("扫描全文");
     expect(html).toContain("扫描选中段落");
     expect(html).toContain("简体中文（中国大陆）");
+    expect(html).toContain("以修订方式替换");
+    expect(html).toContain("用户词典");
   });
 
   it("host segments flow into scan results", async () => {

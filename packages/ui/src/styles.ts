@@ -26,4 +26,14 @@ export const CSS = `
 .cvl .actions button { padding: 2px 8px; font-size: 12px; }
 .cvl button.link { border: 0; background: none; padding: 0; color: #0f6cbd; text-decoration: underline; }
 .cvl .foot { margin-top: 16px; font-size: 11px; color: #8a8a8a; }
+.cvl .check { display: flex; align-items: center; gap: 6px; margin: 8px 0 0; color: #242424; font-size: 13px; }
+.cvl .check input { margin: 0; }
+.cvl .area { font-size: 11px; color: #0f6cbd; background: #eaf3fb; border-radius: 3px; padding: 0 4px; margin-right: 6px; }
+.cvl details.dict { margin-top: 14px; border-top: 1px solid #e0e0e0; padding-top: 8px; }
+.cvl details.dict summary { cursor: pointer; font-weight: 600; }
+.cvl .pair { display: flex; align-items: center; gap: 4px; }
+.cvl .pair input { flex: 1; min-width: 0; padding: 4px 6px; font: inherit; }
+.cvl ul.plain { margin: 4px 0; }
+.cvl ul.plain li { cursor: default; border: 0; padding: 2px 0; margin: 0; display: flex; align-items: center; gap: 4px; }
+.cvl ul.plain li .link { margin-left: auto; }
 `;

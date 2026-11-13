@@ -6,12 +6,26 @@ import {
   scanSegments,
   type DetectSettings,
   type DetectionLevel,
+  AREA_LABELS,
   type HostAdapter,
+  type IssueTarget,
   type LocatedIssue,
+  type UserDictionary,
   type ScanScope,
   type VariantCode,
 } from "@cvl/core";
-import { loadIgnored, loadSettings, saveIgnored, saveSettings } from "./storage";
+import { DictionaryPanel } from "./DictionaryPanel";
+import {
+  loadDictionary,
+  loadIgnored,
+  loadPrefs,
+  loadSettings,
+  saveDictionary,
+  saveIgnored,
+  savePrefs,
+  saveSettings,
+  type Prefs,
+} from "./storage";
 import { CSS } from "./styles";
 
 type Status =
@@ -29,13 +43,17 @@ function errorText(error: unknown): string {
 export function App({ host }: { host: HostAdapter }) {
   const [settings, setSettings] = useState<DetectSettings>(loadSettings);
   const [ignored, setIgnored] = useState<Set<string>>(loadIgnored);
+  const [prefs, setPrefs] = useState<Prefs>(loadPrefs);
+  const [dictionary, setDictionary] = useState<UserDictionary>(loadDictionary);
+  /** 已在文档中用高亮标出的位置。 */
+  const [marked, setMarked] = useState<IssueTarget[]>([]);
   const [issues, setIssues] = useState<LocatedIssue[]>([]);
   const [scope, setScope] = useState<ScanScope | null>(null);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
   // 回调里始终读取最新的设置与忽略列表，避免闭包过期。
-  const latest = useRef({ settings, ignored });
-  latest.current = { settings, ignored };
+  const latest = useRef({ settings, ignored, prefs, dictionary, marked });
+  latest.current = { settings, ignored, prefs, dictionary, marked };
 
   const busy = status.kind === "busy";
 
@@ -43,8 +61,12 @@ export function App({ host }: { host: HostAdapter }) {
     async (target: ScanScope, note?: string) => {
       setStatus({ kind: "busy", text: `正在扫描${SCOPE_LABEL[target]}…` });
       try {
-        const segments = await host.readSegments(target);
-        const found = scanSegments(segments, latest.current.settings, latest.current.ignored);
+        const { settings, ignored, prefs, dictionary } = latest.current;
+        const segments = await host.readSegments(target, {
+          headerFooter: prefs.headerFooter,
+          notes: prefs.notes,
+        });
+        const found = scanSegments(segments, settings, ignored, dictionary);
         setIssues(found);
         setScope(target);
         setStatus({
@@ -76,6 +98,24 @@ export function App({ host }: { host: HostAdapter }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings]);
 
+  // 词典或检查区域变化后同样自动重扫。
+  const firstExtra = useRef(true);
+  useEffect(() => {
+    saveDictionary(dictionary);
+    if (firstExtra.current) {
+      firstExtra.current = false;
+      return;
+    }
+    if (scope) {
+      void scan(scope);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dictionary, prefs.headerFooter, prefs.notes]);
+
+  useEffect(() => {
+    savePrefs(prefs);
+  }, [prefs]);
+
   const replace = useCallback(
     async (items: LocatedIssue[]) => {
       if (!scope || items.length === 0) {
@@ -91,11 +131,14 @@ export function App({ host }: { host: HostAdapter }) {
             occurrence: item.occurrence,
             text: item.issue.replacement,
           })),
+          { trackChanges: latest.current.prefs.trackChanges, clearMarks: latest.current.marked.length > 0 },
         );
         const note =
           `已替换 ${result.replaced} 处` +
+          (result.tracked ? "（修订方式，可在「审阅」中接受 / 拒绝）" : "") +
           (result.skipped > 0 ? `，${result.skipped} 处因文档已变化被跳过` : "") +
-          "。";
+          "。" +
+          (result.documentTracking ? "文档已开启修订，本次替换按修订记录。" : "");
         await scan(scope, note);
       } catch (error) {
         setStatus({ kind: "error", text: `替换失败：${errorText(error)}` });
@@ -138,6 +181,35 @@ export function App({ host }: { host: HostAdapter }) {
     }
   }, [scan, scope]);
 
+  const markIssues = useCallback(async () => {
+    setStatus({ kind: "busy", text: "正在标出…" });
+    try {
+      const count = await host.mark(issues);
+      setMarked(issues);
+      setStatus({ kind: "info", text: `已用高亮标出 ${count} 处。` });
+    } catch (error) {
+      setStatus({ kind: "error", text: `标出失败：${errorText(error)}` });
+    }
+  }, [host, issues]);
+
+  const clearMarks = useCallback(async () => {
+    setStatus({ kind: "busy", text: "正在清除标记…" });
+    try {
+      const count = await host.clearMarks(latest.current.marked);
+      setMarked([]);
+      setStatus({ kind: "info", text: `已清除 ${count} 处高亮标记。` });
+    } catch (error) {
+      setStatus({ kind: "error", text: `清除失败：${errorText(error)}` });
+    }
+  }, [host]);
+
+  const allow = useCallback((item: LocatedIssue) => {
+    setDictionary((previous) => ({
+      ...previous,
+      allowed: [...previous.allowed, { variant: latest.current.settings.variant, text: item.sourceText }],
+    }));
+  }, []);
+
   const safeItems = useMemo(
     () => issues.filter((item) => item.issue.confidence === "high"),
     [issues],
@@ -179,6 +251,31 @@ export function App({ host }: { host: HostAdapter }) {
         ))}
       </select>
 
+      <label className="check">
+        <input
+          type="checkbox"
+          checked={prefs.headerFooter}
+          onChange={(event) => setPrefs({ ...prefs, headerFooter: event.target.checked })}
+        />
+        检查页眉页脚（全文扫描）
+      </label>
+      <label className="check">
+        <input
+          type="checkbox"
+          checked={prefs.notes}
+          onChange={(event) => setPrefs({ ...prefs, notes: event.target.checked })}
+        />
+        检查脚注 / 尾注（全文扫描）
+      </label>
+      <label className="check" title="替换以 Track Changes 写入，可在 Word「审阅」中接受或拒绝">
+        <input
+          type="checkbox"
+          checked={prefs.trackChanges}
+          onChange={(event) => setPrefs({ ...prefs, trackChanges: event.target.checked })}
+        />
+        以修订方式替换
+      </label>
+
       <div className="row">
         <button className="primary" disabled={busy} onClick={() => void scan("document")}>
           扫描全文
@@ -209,10 +306,19 @@ export function App({ host }: { host: HostAdapter }) {
               全部替换（{safeItems.length}）
             </button>
           </div>
+          <div className="row">
+            <button disabled={busy} onClick={() => void markIssues()}>
+              高亮标出
+            </button>
+            <button disabled={busy || marked.length === 0} onClick={() => void clearMarks()}>
+              清除标记
+            </button>
+          </div>
           <ul>
             {issues.map((item) => (
               <li key={item.key} onClick={() => void reveal(item)}>
                 <div className="ctx">
+                  {item.area !== "body" && <span className="area">{AREA_LABELS[item.area]}</span>}
                   {item.before}
                   <span className="src">{item.sourceText}</span>
                   <span className="arrow">→</span>
@@ -240,12 +346,24 @@ export function App({ host }: { host: HostAdapter }) {
                   >
                     忽略
                   </button>
+                  <button
+                    disabled={busy}
+                    title="加入用户词典的允许词，之后不再报告包含它的位置"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      allow(item);
+                    }}
+                  >
+                    允许
+                  </button>
                 </div>
               </li>
             ))}
           </ul>
         </>
       )}
+
+      <DictionaryPanel variant={settings.variant} dictionary={dictionary} onChange={setDictionary} />
 
       <div className="foot">
         点击条目可在文档中定位。检查在本机完成，文档内容不会上传。v0.1

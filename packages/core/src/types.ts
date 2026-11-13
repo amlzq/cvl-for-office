@@ -1,6 +1,6 @@
 export type VariantCode = "zh-CN" | "zh-TW" | "zh-HK" | "zh-Hant";
 export type DetectionLevel = "standard" | "relaxed";
-export type IssueType = "script" | "variant_term";
+export type IssueType = "script" | "variant_term" | "user_phrase";
 export type Confidence = "high" | "medium";
 
 export const VARIANTS: readonly VariantCode[] = ["zh-CN", "zh-TW", "zh-HK", "zh-Hant"];

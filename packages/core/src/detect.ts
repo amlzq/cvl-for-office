@@ -1,5 +1,6 @@
 import { TERM_RULES } from "./rules/terms";
 import { findScriptChanges, type ScriptChange } from "./rules/script";
+import type { UserDictionary } from "./dictionary";
 import {
   VARIANT_LABELS,
   type DetectSettings,
@@ -123,29 +124,106 @@ function detectTerms(text: string, variant: VariantCode): RankedIssue[] {
   return matches;
 }
 
+function findAll(text: string, needle: string): number[] {
+  const found: number[] = [];
+  if (!needle) {
+    return found;
+  }
+  let from = 0;
+  while (from < text.length) {
+    const index = text.indexOf(needle, from);
+    if (index === -1) {
+      break;
+    }
+    found.push(index);
+    from = index + needle.length;
+  }
+  return found;
+}
+
+/** 用户词组优先级高于任何内置规则。 */
+const USER_PRIORITY = 1000;
+
+function detectUserPhrases(
+  text: string,
+  variant: VariantCode,
+  dictionary: UserDictionary,
+): RankedIssue[] {
+  const matches: RankedIssue[] = [];
+  for (const phrase of dictionary.phrases) {
+    if (phrase.variant !== variant || !phrase.source || phrase.source === phrase.target) {
+      continue;
+    }
+    for (const start of findAll(text, phrase.source)) {
+      const end = start + phrase.source.length;
+      matches.push({
+        priority: USER_PRIORITY,
+        issue: {
+          id: `user:${phrase.source}:${start}:${end}:${variant}`,
+          type: "user_phrase",
+          sourceText: phrase.source,
+          replacement: phrase.target,
+          targetVariant: variant,
+          start,
+          end,
+          confidence: "high",
+          message: `用户词典：「${phrase.source}」→「${phrase.target}」`,
+          ruleId: `user:${phrase.source}`,
+        },
+      });
+    }
+  }
+  return pickNonOverlapping(matches);
+}
+
 /** 检测一段纯文本，返回按位置排序、互不重叠的问题列表。 */
-export function detectText(text: string, settings: DetectSettings): Issue[] {
+export function detectText(
+  text: string,
+  settings: DetectSettings,
+  dictionary?: UserDictionary,
+): Issue[] {
   if (!text.trim()) {
     return [];
   }
 
   const variant = settings.variant;
-  const issues: Issue[] =
+  const userIssues = dictionary ? detectUserPhrases(text, variant, dictionary) : [];
+  const issues: Issue[] = userIssues.map((item) => item.issue);
+
+  const termIssues: Issue[] =
     settings.level === "standard"
-      ? pickNonOverlapping(detectTerms(text, variant)).map((item) => item.issue)
+      ? pickNonOverlapping(detectTerms(text, variant))
+          .map((item) => item.issue)
+          .filter((issue) => !issues.some((other) => overlaps(other, issue)))
       : [];
-  const termIssues = [...issues];
+  issues.push(...termIssues);
 
   const scriptCandidates = pickNonOverlapping(
     findScriptChanges(text, variant).map((change) => scriptIssue(change, variant)),
   );
   for (const candidate of scriptCandidates) {
-    if (!termIssues.some((issue) => overlaps(issue, candidate.issue))) {
+    if (!issues.some((issue) => overlaps(issue, candidate.issue))) {
       issues.push(candidate.issue);
     }
   }
 
-  return sortCandidates(issues.map((issue) => ({ issue, priority: 0 }))).map(
+  // 「允许词」：与其任一出现位置有重叠的问题都不报告。
+  const allowedSpans: Array<[number, number]> = [];
+  for (const word of dictionary?.allowed ?? []) {
+    if (word.variant === variant) {
+      for (const start of findAll(text, word.text)) {
+        allowedSpans.push([start, start + word.text.length]);
+      }
+    }
+  }
+  const visible =
+    allowedSpans.length === 0
+      ? issues
+      : issues.filter(
+          (issue) => !allowedSpans.some(([start, end]) => issue.start < end && start < issue.end),
+        );
+
+  return sortCandidates(visible.map((issue) => ({ issue, priority: 0 }))).map(
     (item) => item.issue,
   );
 }
