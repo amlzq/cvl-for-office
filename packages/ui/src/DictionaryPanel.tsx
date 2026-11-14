@@ -1,13 +1,30 @@
 import { useRef, useState } from "react";
 import {
+  MAX_IMPORT_FILE_BYTES,
+  MAX_PHRASES_PER_VARIANT,
   VARIANT_LABELS,
-  dictionaryFromCsv,
-  dictionaryToCsv,
-  mergeDictionaries,
+  buildPhraseTemplateCsv,
+  decodePhraseFile,
+  exportPhrases,
+  importPhrases,
   normalizeDictionary,
+  parsePhraseFile,
   type UserDictionary,
   type VariantCode,
 } from "@cvl/core";
+
+function downloadTextFile(filename: string, text: string): void {
+  const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  link.style.display = "none";
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 0);
+}
 
 interface Props {
   variant: VariantCode;
@@ -56,23 +73,26 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
     setAllowText("");
   };
 
-  const exportCsv = () => {
-    const blob = new Blob(["﻿" + dictionaryToCsv(dictionary)], { type: "text/csv;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "cvl-user-dictionary.csv";
-    link.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const importCsv = async (file: File) => {
-    const { dictionary: imported, skipped } = dictionaryFromCsv(await file.text());
-    onChange(mergeDictionaries(dictionary, imported));
+  const importFile = async (file: File) => {
+    if (file.size > MAX_IMPORT_FILE_BYTES) {
+      setNote(`文件过大，请选择 ${Math.round(MAX_IMPORT_FILE_BYTES / 1024)} KB 以内的文件。`);
+      return;
+    }
+    let text: string;
+    try {
+      text = decodePhraseFile(await file.arrayBuffer());
+    } catch {
+      setNote("文件读取失败。");
+      return;
+    }
+    const { dictionary: next, added, updated, skipped } = importPhrases(dictionary, variant, parsePhraseFile(text));
+    if (added + updated > 0) onChange(next);
     setNote(
-      `已导入 ${imported.phrases.length} 条词组、${imported.allowed.length} 个允许词` +
-        (skipped > 0 ? `，${skipped} 行无法识别已跳过` : "") +
-        "。",
+      added + updated + skipped === 0
+        ? "文件中没有可导入的词组。"
+        : `已导入到「${VARIANT_LABELS[variant]}」：新增 ${added} 条，更新 ${updated} 条` +
+            (skipped > 0 ? `，已达上限 ${MAX_PHRASES_PER_VARIANT} 条，${skipped} 条未导入` : "") +
+            "。",
     );
   };
 
@@ -124,23 +144,32 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
       </ul>
 
       <div className="row">
-        <button onClick={() => fileInput.current?.click()}>导入 CSV</button>
-        <button disabled={dictionary.phrases.length + dictionary.allowed.length === 0} onClick={exportCsv}>
-          导出 CSV
+        <button onClick={() => fileInput.current?.click()}>导入</button>
+        <button
+          disabled={phrases.length === 0}
+          onClick={() => downloadTextFile(`custom-phrases-${variant}.csv`, exportPhrases(dictionary, variant))}
+        >
+          导出
+        </button>
+        <button onClick={() => downloadTextFile("custom-phrases-template.csv", buildPhraseTemplateCsv())}>
+          下载模板
         </button>
       </div>
       <input
         ref={fileInput}
         type="file"
-        accept=".csv,text/csv"
+        accept=".csv,.txt,.tsv,text/csv,text/plain"
         hidden
         onChange={(event) => {
           const file = event.target.files?.[0];
           event.target.value = "";
-          if (file) void importCsv(file);
+          if (file) void importFile(file);
         }}
       />
-      <div className="msg">CSV 列：type（phrase / allow）, variant（zh-CN / zh-TW / zh-HK / zh-Hant）, source, target</div>
+      <div className="msg">
+        导入导出只针对当前写法的自定义词组，不含允许词。支持 CSV（两列 from,to）和 OpenCC 词条（原词⇥目标词）格式，
+        与浏览器扩展、macOS 版通用。
+      </div>
       {note && <div className="msg" role="status">{note}</div>}
     </details>
   );

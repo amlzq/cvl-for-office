@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { detectText } from "./detect";
-import { dictionaryFromCsv, dictionaryToCsv, normalizeDictionary } from "./dictionary";
+import { normalizeDictionary } from "./dictionary";
 import { DEFAULT_SETTINGS } from "./types";
 
 const tw = { ...DEFAULT_SETTINGS, variant: "zh-TW" as const };
@@ -30,26 +30,5 @@ describe("user dictionary detection", () => {
     expect(detectText("请使用软件", tw, dictionary).every((i) => i.sourceText !== "软件")).toBe(true);
     const other = { ...tw, variant: "zh-HK" as const };
     expect(detectText("软件", other, dictionary).length).toBeGreaterThan(0);
-  });
-});
-
-describe("dictionary CSV", () => {
-  it("round-trips, including quotes and commas", () => {
-    const dictionary = normalizeDictionary({
-      phrases: [{ variant: "zh-CN", source: 'a,"b"', target: "c" }],
-      allowed: [{ variant: "zh-HK", text: "資料" }],
-    });
-    const { dictionary: parsed, skipped } = dictionaryFromCsv(dictionaryToCsv(dictionary));
-    expect(parsed).toEqual(dictionary);
-    expect(skipped).toBe(0);
-  });
-
-  it("skips invalid rows and ignores BOM and header", () => {
-    const { dictionary, skipped } = dictionaryFromCsv(
-      "﻿type,variant,source,target\nphrase,zh-XX,a,b\nphrase,zh-TW,a,b\n\nallow,zh-TW,x,\nbogus\n",
-    );
-    expect(dictionary.phrases).toHaveLength(1);
-    expect(dictionary.allowed).toHaveLength(1);
-    expect(skipped).toBe(2);
   });
 });
