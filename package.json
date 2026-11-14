@@ -13,7 +13,8 @@
     "start:ms": "npm run start -w @cvl/host-ms",
     "stop:ms": "npm run stop -w @cvl/host-ms",
     "build:ms": "npm run build -w @cvl/host-ms",
-    "validate:ms": "npm run validate -w @cvl/host-ms"
+    "validate:ms": "npm run validate -w @cvl/host-ms",
+    "sync:vectors": "node scripts/sync-test-vectors.mjs"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

@@ -16,15 +16,22 @@ describe("user dictionary detection", () => {
     expect(detectText("甲方公司已确认", { ...tw, variant: "zh-CN" }, dictionary)).toEqual([]);
   });
 
-  it("user phrases win over built-in rules and work in relaxed mode", () => {
+  it("user phrases win over built-in rules on the same span", () => {
     const dictionary = normalizeDictionary({
       phrases: [{ variant: "zh-TW", source: "软件", target: "軟件" }],
     });
-    const issues = detectText("软件", { ...tw, level: "relaxed" }, dictionary);
+    const issues = detectText("软件", tw, dictionary);
     expect(issues.map((issue) => issue.replacement)).toEqual(["軟件"]);
   });
 
-  it("does not report text overlapping an allowed word", () => {
+  it("relaxed level checks script only, so user phrases do not apply (same as the extension)", () => {
+    const dictionary = normalizeDictionary({
+      phrases: [{ variant: "zh-TW", source: "甲方公司", target: "甲方" }],
+    });
+    expect(detectText("甲方公司", { ...tw, level: "relaxed" }, dictionary)).toEqual([]);
+  });
+
+  it("does not report an allowed word or script changes inside it", () => {
     expect(detectText("请使用软件", tw).length).toBeGreaterThan(0);
     const dictionary = normalizeDictionary({ allowed: [{ variant: "zh-TW", text: "软件" }] });
     expect(detectText("请使用软件", tw, dictionary).every((i) => i.sourceText !== "软件")).toBe(true);

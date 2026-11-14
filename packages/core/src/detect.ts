@@ -61,18 +61,21 @@ function termIssue(
   start: number,
 ): RankedIssue {
   const end = start + rule.sourceTerm.length;
+  const isUser = rule.source === "user";
   return {
     priority: rule.priority,
     issue: {
       id: `${rule.id}:${start}:${end}:${variant}`,
-      type: "variant_term",
+      type: isUser ? "user_phrase" : "variant_term",
       sourceText: rule.sourceTerm,
       replacement,
       targetVariant: variant,
       start,
       end,
       confidence: rule.safe ? "high" : "medium",
-      message: `${VARIANT_LABELS[variant]}中通常写作「${replacement}」`,
+      message: isUser
+        ? `用户词典：「${rule.sourceTerm}」→「${replacement}」`
+        : `${VARIANT_LABELS[variant]}中通常写作「${replacement}」`,
       ruleId: rule.id,
     },
   };
@@ -99,16 +102,41 @@ function scriptIssue(change: ScriptChange, variant: VariantCode): RankedIssue {
   };
 }
 
-function detectTerms(text: string, variant: VariantCode): RankedIssue[] {
-  const rules = TERM_RULES.filter((rule) => rule.enabled && rule.targets[variant]).sort(
+/** 用户词组优先级高于任何内置规则（与扩展版一致）。 */
+const USER_PRIORITY = 10_000;
+
+/** 用户词组转为词汇规则，与内置规则一起参与匹配（与扩展版 loadRuleBundle 一致）。 */
+function userTermRules(variant: VariantCode, dictionary?: UserDictionary): VariantTermRule[] {
+  return (dictionary?.phrases ?? [])
+    .filter((phrase) => phrase.variant === variant)
+    .map((phrase) => ({
+      id: `user:${phrase.source}`,
+      kind: "variant_term" as const,
+      sourceTerm: phrase.source,
+      targets: { [variant]: phrase.target },
+      safe: true,
+      enabled: true,
+      priority: USER_PRIORITY,
+      source: "user" as const,
+      tags: ["user-phrase"],
+    }));
+}
+
+function detectTerms(
+  text: string,
+  variant: VariantCode,
+  rules: VariantTermRule[],
+  allowed: Set<string>,
+): RankedIssue[] {
+  const sorted = [...rules].sort(
     (left, right) =>
       right.sourceTerm.length - left.sourceTerm.length || right.priority - left.priority,
   );
   const matches: RankedIssue[] = [];
 
-  for (const rule of rules) {
+  for (const rule of sorted) {
     const replacement = rule.targets[variant];
-    if (!replacement || replacement === rule.sourceTerm) {
+    if (!replacement || replacement === rule.sourceTerm || allowed.has(rule.sourceTerm)) {
       continue;
     }
     let from = 0;
@@ -124,59 +152,29 @@ function detectTerms(text: string, variant: VariantCode): RankedIssue[] {
   return matches;
 }
 
-function findAll(text: string, needle: string): number[] {
-  const found: number[] = [];
-  if (!needle) {
-    return found;
-  }
-  let from = 0;
-  while (from < text.length) {
-    const index = text.indexOf(needle, from);
-    if (index === -1) {
-      break;
+/** 区间 [start, end) 是否被某个允许词的某次出现完整覆盖。 */
+function coveredByAllowed(text: string, start: number, end: number, allowed: Set<string>): boolean {
+  for (const word of allowed) {
+    if (!word) continue;
+    let from = 0;
+    while (from < text.length) {
+      const index = text.indexOf(word, from);
+      if (index === -1) break;
+      if (index <= start && end <= index + word.length) return true;
+      from = index + Math.max(1, word.length);
     }
-    found.push(index);
-    from = index + needle.length;
   }
-  return found;
+  return false;
 }
 
-/** 用户词组优先级高于任何内置规则。 */
-const USER_PRIORITY = 1000;
-
-function detectUserPhrases(
-  text: string,
-  variant: VariantCode,
-  dictionary: UserDictionary,
-): RankedIssue[] {
-  const matches: RankedIssue[] = [];
-  for (const phrase of dictionary.phrases) {
-    if (phrase.variant !== variant || !phrase.source || phrase.source === phrase.target) {
-      continue;
-    }
-    for (const start of findAll(text, phrase.source)) {
-      const end = start + phrase.source.length;
-      matches.push({
-        priority: USER_PRIORITY,
-        issue: {
-          id: `user:${phrase.source}:${start}:${end}:${variant}`,
-          type: "user_phrase",
-          sourceText: phrase.source,
-          replacement: phrase.target,
-          targetVariant: variant,
-          start,
-          end,
-          confidence: "high",
-          message: `用户词典：「${phrase.source}」→「${phrase.target}」`,
-          ruleId: `user:${phrase.source}`,
-        },
-      });
-    }
-  }
-  return pickNonOverlapping(matches);
-}
-
-/** 检测一段纯文本，返回按位置排序、互不重叠的问题列表。 */
+/**
+ * 检测一段纯文本，返回按位置排序、互不重叠的问题列表。
+ * 行为与浏览器扩展版的 detectText 一致，由共享测试向量（vectors.test.ts）保证：
+ *
+ * - 标准档：用户词组与内置词汇规则一起匹配（长词、靠前者优先，同区间用户词组优先），再补字形问题；
+ *   宽松档：只查字形，用户词组也不生效。
+ * - 允许词：原词恰好等于允许词的词汇规则不报告；被允许词完整覆盖的字形问题不报告。
+ */
 export function detectText(
   text: string,
   settings: DetectSettings,
@@ -187,43 +185,39 @@ export function detectText(
   }
 
   const variant = settings.variant;
-  const userIssues = dictionary ? detectUserPhrases(text, variant, dictionary) : [];
-  const issues: Issue[] = userIssues.map((item) => item.issue);
+  const allowed = new Set(
+    (dictionary?.allowed ?? []).filter((word) => word.variant === variant).map((word) => word.text),
+  );
 
-  const termIssues: Issue[] =
+  const issues: RankedIssue[] =
     settings.level === "standard"
-      ? pickNonOverlapping(detectTerms(text, variant))
-          .map((item) => item.issue)
-          .filter((issue) => !issues.some((other) => overlaps(other, issue)))
+      ? pickNonOverlapping(
+          detectTerms(
+            text,
+            variant,
+            [
+              ...userTermRules(variant, dictionary),
+              ...TERM_RULES.filter((rule) => rule.enabled && Boolean(rule.targets[variant])),
+            ],
+            allowed,
+          ),
+        )
       : [];
-  issues.push(...termIssues);
+  const occupied = issues.map((item) => item.issue);
 
   const scriptCandidates = pickNonOverlapping(
-    findScriptChanges(text, variant).map((change) => scriptIssue(change, variant)),
+    findScriptChanges(text, variant)
+      .filter(
+        (change) =>
+          !allowed.has(change.source) && !coveredByAllowed(text, change.start, change.end, allowed),
+      )
+      .map((change) => scriptIssue(change, variant)),
   );
   for (const candidate of scriptCandidates) {
-    if (!issues.some((issue) => overlaps(issue, candidate.issue))) {
-      issues.push(candidate.issue);
+    if (!occupied.some((issue) => overlaps(issue, candidate.issue))) {
+      issues.push(candidate);
     }
   }
 
-  // 「允许词」：与其任一出现位置有重叠的问题都不报告。
-  const allowedSpans: Array<[number, number]> = [];
-  for (const word of dictionary?.allowed ?? []) {
-    if (word.variant === variant) {
-      for (const start of findAll(text, word.text)) {
-        allowedSpans.push([start, start + word.text.length]);
-      }
-    }
-  }
-  const visible =
-    allowedSpans.length === 0
-      ? issues
-      : issues.filter(
-          (issue) => !allowedSpans.some(([start, end]) => issue.start < end && start < issue.end),
-        );
-
-  return sortCandidates(visible.map((issue) => ({ issue, priority: 0 }))).map(
-    (item) => item.issue,
-  );
+  return sortCandidates(issues).map((item) => item.issue);
 }

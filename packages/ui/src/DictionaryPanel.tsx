@@ -124,7 +124,7 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
         ))}
       </ul>
 
-      <label>允许词：包含这些词的位置不再报告</label>
+      <label>允许词：这个词本身不再报告，词内的简繁字形也不再报告</label>
       <div className="pair">
         <input aria-label="允许词" placeholder="允许词" value={allowText} onChange={(e) => setAllowText(e.target.value)} />
         <button disabled={!allowText.trim()} onClick={addAllowed}>添加</button>
