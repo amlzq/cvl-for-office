@@ -14301,5 +14301,8471 @@
    }
   },
   "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"这个软件默认支持上传。\"",
+  "text": "这个软件默认支持上传。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:这>這:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "这",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:这>這",
+    "suggestion": "這"
+   },
+   {
+    "id": "opencc:个>個:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "个",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:个>個",
+    "suggestion": "個"
+   },
+   {
+    "id": "opencc:软>軟:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:认>認:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "认",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:认>認",
+    "suggestion": "認"
+   },
+   {
+    "id": "opencc:传>傳:9:10:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "传",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:传>傳",
+    "suggestion": "傳"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"软件默认很好用。\"",
+  "text": "软件默认很好用。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:认>認:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "认",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:认>認",
+    "suggestion": "認"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"這個軟體預設支援上傳。\"",
+  "text": "這個軟體預設支援上傳。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"請使用滑鼠點選連結並下載影片。\"",
+  "text": "請使用滑鼠點選連結並下載影片。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"服务器上的视频文件需要通过鼠标点击链接下载。\"",
+  "text": "服务器上的视频文件需要通过鼠标点击链接下载。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:务>務:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "务",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:务>務",
+    "suggestion": "務"
+   },
+   {
+    "id": "opencc:视>視:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "视",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:视>視",
+    "suggestion": "視"
+   },
+   {
+    "id": "opencc:频>頻:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "频",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:频>頻",
+    "suggestion": "頻"
+   },
+   {
+    "id": "opencc:过>過:12:13:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "过",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:过>過",
+    "suggestion": "過"
+   },
+   {
+    "id": "opencc:标>標:14:15:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 14,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:15:16:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   },
+   {
+    "id": "opencc:击>擊:16:17:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "击",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:击>擊",
+    "suggestion": "擊"
+   },
+   {
+    "id": "opencc:链>鏈:17:18:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "链",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:链>鏈",
+    "suggestion": "鏈"
+   },
+   {
+    "id": "opencc:载>載:20:21:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "载",
+    "start": 20,
+    "end": 21,
+    "confidence": "high",
+    "ruleId": "opencc:载>載",
+    "suggestion": "載"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"皇后在后面，面条很好吃，面子很重要。\"",
+  "text": "皇后在后面，面条很好吃，面子很重要。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:后>後:3:4:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "后",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:后>後",
+    "suggestion": "後"
+   },
+   {
+    "id": "opencc:面>麵:6:7:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "面",
+    "start": 6,
+    "end": 7,
+    "confidence": "medium",
+    "ruleId": "opencc:面>麵",
+    "suggestion": "麵"
+   },
+   {
+    "id": "opencc:条>條:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "条",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:条>條",
+    "suggestion": "條"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"干擾里長若干人，頭髮發展。\"",
+  "text": "干擾里長若干人，頭髮發展。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"他发现了发财的办法，头发很长。\"",
+  "text": "他发现了发财的办法，头发很长。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:发>發:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:现>現:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "现",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:现>現",
+    "suggestion": "現"
+   },
+   {
+    "id": "opencc:发>發:4:5:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:财>財:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "财",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:财>財",
+    "suggestion": "財"
+   },
+   {
+    "id": "opencc:办>辦:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "办",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:办>辦",
+    "suggestion": "辦"
+   },
+   {
+    "id": "opencc:头>頭:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "头",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:头>頭",
+    "suggestion": "頭"
+   },
+   {
+    "id": "opencc:发>髮:11:12:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 11,
+    "end": 12,
+    "confidence": "medium",
+    "ruleId": "opencc:发>髮",
+    "suggestion": "髮"
+   },
+   {
+    "id": "opencc:长>長:13:14:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "长",
+    "start": 13,
+    "end": 14,
+    "confidence": "high",
+    "ruleId": "opencc:长>長",
+    "suggestion": "長"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"出租车、公交车和自行车都停在幼儿园门口。\"",
+  "text": "出租车、公交车和自行车都停在幼儿园门口。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:车>車:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "车",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:车>車",
+    "suggestion": "車"
+   },
+   {
+    "id": "opencc:车>車:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "车",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:车>車",
+    "suggestion": "車"
+   },
+   {
+    "id": "opencc:车>車:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "车",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:车>車",
+    "suggestion": "車"
+   },
+   {
+    "id": "opencc:儿>兒:15:16:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "儿",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:儿>兒",
+    "suggestion": "兒"
+   },
+   {
+    "id": "opencc:园>園:16:17:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "园",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:园>園",
+    "suggestion": "園"
+   },
+   {
+    "id": "opencc:门>門:17:18:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "门",
+    "start": 17,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "opencc:门>門",
+    "suggestion": "門"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"新西兰、澳大利亚和意大利的人工智能发展很快。\"",
+  "text": "新西兰、澳大利亚和意大利的人工智能发展很快。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:兰>蘭:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "兰",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:兰>蘭",
+    "suggestion": "蘭"
+   },
+   {
+    "id": "opencc:亚>亞:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "亚",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:亚>亞",
+    "suggestion": "亞"
+   },
+   {
+    "id": "opencc:发>發:17:18:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"我的笔记本电脑和智能手机都有高清屏幕。\"",
+  "text": "我的笔记本电脑和智能手机都有高清屏幕。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:笔>筆:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   },
+   {
+    "id": "opencc:记>記:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "记",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:记>記",
+    "suggestion": "記"
+   },
+   {
+    "id": "opencc:电>電:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "电",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:电>電",
+    "suggestion": "電"
+   },
+   {
+    "id": "opencc:脑>腦:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "脑",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:脑>腦",
+    "suggestion": "腦"
+   },
+   {
+    "id": "opencc:机>機:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "机",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:机>機",
+    "suggestion": "機"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"台灣的台北有很多好吃的。\"",
+  "text": "台灣的台北有很多好吃的。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"用户使用户外设备。\"",
+  "text": "用户使用户外设备。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:户>戶:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "户",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:户>戶",
+    "suggestion": "戶"
+   },
+   {
+    "id": "opencc:户>戶:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "户",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:户>戶",
+    "suggestion": "戶"
+   },
+   {
+    "id": "opencc:设>設:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "设",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:设>設",
+    "suggestion": "設"
+   },
+   {
+    "id": "opencc:备>備:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "备",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:备>備",
+    "suggestion": "備"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"程序员在云计算平台上写博客。\"",
+  "text": "程序员在云计算平台上写博客。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:员>員:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "员",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:员>員",
+    "suggestion": "員"
+   },
+   {
+    "id": "opencc:云>雲:4:5:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "云",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:云>雲",
+    "suggestion": "雲"
+   },
+   {
+    "id": "opencc:计>計:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "计",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:计>計",
+    "suggestion": "計"
+   },
+   {
+    "id": "opencc:写>寫:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "写",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:写>寫",
+    "suggestion": "寫"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"社交媒体上的短信和激光笔。\"",
+  "text": "社交媒体上的短信和激光笔。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:体>體:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "体",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:体>體",
+    "suggestion": "體"
+   },
+   {
+    "id": "opencc:笔>筆:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"Hello 世界 mixed English text 1",
+  "text": "Hello 世界 mixed English text 123 软件 and 軟體.",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:32:33:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 32,
+    "end": 33,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"  \\n\\t \"",
+  "text": "  \n\t ",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"\"",
+  "text": "",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"😀软件😀𠀀视频\"",
+  "text": "😀软件😀𠀀视频",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:视>視:8:9:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "视",
+    "start": 8,
+    "end": 9,
+    "confidence": "high",
+    "ruleId": "opencc:视>視",
+    "suggestion": "視"
+   },
+   {
+    "id": "opencc:频>頻:9:10:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "频",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:频>頻",
+    "suggestion": "頻"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"鼠标，键盘，显示器，内存，硬盘\"",
+  "text": "鼠标，键盘，显示器，内存，硬盘",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:标>標:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:键>鍵:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "键",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:键>鍵",
+    "suggestion": "鍵"
+   },
+   {
+    "id": "opencc:盘>盤:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   },
+   {
+    "id": "opencc:显>顯:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "显",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:显>顯",
+    "suggestion": "顯"
+   },
+   {
+    "id": "opencc:内>內:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "内",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:内>內",
+    "suggestion": "內"
+   },
+   {
+    "id": "opencc:盘>盤:14:15:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 14,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"菠萝和西红柿，方便面，空调。\"",
+  "text": "菠萝和西红柿，方便面，空调。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:萝>蘿:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "萝",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:萝>蘿",
+    "suggestion": "蘿"
+   },
+   {
+    "id": "opencc:红>紅:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "红",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:红>紅",
+    "suggestion": "紅"
+   },
+   {
+    "id": "opencc:调>調:12:13:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "调",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:调>調",
+    "suggestion": "調"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"悉尼的巴士和的士。\"",
+  "text": "悉尼的巴士和的士。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"這個程式設計師在雲端運算上寫部落格。\"",
+  "text": "這個程式設計師在雲端運算上寫部落格。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"裡面的麵包和麪條，後面的皇后。\"",
+  "text": "裡面的麵包和麪條，後面的皇后。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:麪>麵:6:7:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "麪",
+    "start": 6,
+    "end": 7,
+    "confidence": "medium",
+    "ruleId": "opencc:麪>麵",
+    "suggestion": "麵"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"著名的网络协议与信息安全。\"",
+  "text": "著名的网络协议与信息安全。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:网>網:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "网",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:网>網",
+    "suggestion": "網"
+   },
+   {
+    "id": "opencc:络>絡:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "络",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:络>絡",
+    "suggestion": "絡"
+   },
+   {
+    "id": "opencc:协>協:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "协",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:协>協",
+    "suggestion": "協"
+   },
+   {
+    "id": "opencc:议>議:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "议",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:议>議",
+    "suggestion": "議"
+   },
+   {
+    "id": "opencc:与>與:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "与",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:与>與",
+    "suggestion": "與"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"「引号」和《书名》，标点！\"",
+  "text": "「引号」和《书名》，标点！",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:号>號:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "号",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:号>號",
+    "suggestion": "號"
+   },
+   {
+    "id": "opencc:书>書:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "书",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:书>書",
+    "suggestion": "書"
+   },
+   {
+    "id": "opencc:标>標:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"㐷㐹 罕见字 兀 𪚥\"",
+  "text": "㐷㐹 罕见字 兀 𪚥",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:㐷>傌:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐷",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:㐷>傌",
+    "suggestion": "傌"
+   },
+   {
+    "id": "opencc:㐹>㑶:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐹",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:㐹>㑶",
+    "suggestion": "㑶"
+   },
+   {
+    "id": "opencc:见>見:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "见",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:见>見",
+    "suggestion": "見"
+   }
+  ]
+ },
+ {
+  "name": "tw/relaxed-user-phrase :: \"软软软软软件件件\"",
+  "text": "软软软软软件件件",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "relaxed",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "r-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "r-mouse",
+       "from": "鼠标",
+       "to": "滑鼠器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"这个软件默认支持上传。\"",
+  "text": "这个软件默认支持上传。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:这>這:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "这",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:这>這",
+    "suggestion": "這"
+   },
+   {
+    "id": "opencc:个>個:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "个",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:个>個",
+    "suggestion": "個"
+   },
+   {
+    "id": "o-long:2:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软件默认",
+    "start": 2,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "o-long",
+    "suggestion": "軟體預設值"
+   },
+   {
+    "id": "term-support-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "支持",
+    "start": 6,
+    "end": 8,
+    "confidence": "medium",
+    "ruleId": "term-support-cn",
+    "suggestion": "支援"
+   },
+   {
+    "id": "opencc:传>傳:9:10:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "传",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:传>傳",
+    "suggestion": "傳"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"软件默认很好用。\"",
+  "text": "软件默认很好用。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "o-long:0:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软件默认",
+    "start": 0,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "o-long",
+    "suggestion": "軟體預設值"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"這個軟體預設支援上傳。\"",
+  "text": "這個軟體預設支援上傳。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"請使用滑鼠點選連結並下載影片。\"",
+  "text": "請使用滑鼠點選連結並下載影片。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "o-mouse:4:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "鼠",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "o-mouse",
+    "suggestion": "滑"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"服务器上的视频文件需要通过鼠标点击链接下载。\"",
+  "text": "服务器上的视频文件需要通过鼠标点击链接下载。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-server-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "服务器",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-server-cn",
+    "suggestion": "伺服器"
+   },
+   {
+    "id": "term-video-cn:5:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 5,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   },
+   {
+    "id": "opencc:过>過:12:13:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "过",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:过>過",
+    "suggestion": "過"
+   },
+   {
+    "id": "term-mouse-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:点>點:15:16:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   },
+   {
+    "id": "opencc:击>擊:16:17:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "击",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:击>擊",
+    "suggestion": "擊"
+   },
+   {
+    "id": "term-link-cn:17:19:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "链接",
+    "start": 17,
+    "end": 19,
+    "confidence": "high",
+    "ruleId": "term-link-cn",
+    "suggestion": "連結"
+   },
+   {
+    "id": "opencc:载>載:20:21:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "载",
+    "start": 20,
+    "end": 21,
+    "confidence": "high",
+    "ruleId": "opencc:载>載",
+    "suggestion": "載"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"皇后在后面，面条很好吃，面子很重要。\"",
+  "text": "皇后在后面，面条很好吃，面子很重要。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:后>後:3:4:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "后",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:后>後",
+    "suggestion": "後"
+   },
+   {
+    "id": "term-noodle-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "面条",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-cn",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"干擾里長若干人，頭髮發展。\"",
+  "text": "干擾里長若干人，頭髮發展。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"他发现了发财的办法，头发很长。\"",
+  "text": "他发现了发财的办法，头发很长。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:发>發:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:现>現:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "现",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:现>現",
+    "suggestion": "現"
+   },
+   {
+    "id": "opencc:发>發:4:5:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:财>財:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "财",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:财>財",
+    "suggestion": "財"
+   },
+   {
+    "id": "opencc:办>辦:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "办",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:办>辦",
+    "suggestion": "辦"
+   },
+   {
+    "id": "opencc:头>頭:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "头",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:头>頭",
+    "suggestion": "頭"
+   },
+   {
+    "id": "opencc:发>髮:11:12:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 11,
+    "end": 12,
+    "confidence": "medium",
+    "ruleId": "opencc:发>髮",
+    "suggestion": "髮"
+   },
+   {
+    "id": "opencc:长>長:13:14:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "长",
+    "start": 13,
+    "end": 14,
+    "confidence": "high",
+    "ruleId": "opencc:长>長",
+    "suggestion": "長"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"出租车、公交车和自行车都停在幼儿园门口。\"",
+  "text": "出租车、公交车和自行车都停在幼儿园门口。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-taxi-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "出租车",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-taxi-cn",
+    "suggestion": "計程車"
+   },
+   {
+    "id": "term-bus-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "公交车",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-bus-cn",
+    "suggestion": "公車"
+   },
+   {
+    "id": "term-bicycle-cn:8:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "自行车",
+    "start": 8,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-bicycle-cn",
+    "suggestion": "腳踏車"
+   },
+   {
+    "id": "term-kindergarten-cn:14:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "幼儿园",
+    "start": 14,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-kindergarten-cn",
+    "suggestion": "幼稚園"
+   },
+   {
+    "id": "opencc:门>門:17:18:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "门",
+    "start": 17,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "opencc:门>門",
+    "suggestion": "門"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"新西兰、澳大利亚和意大利的人工智能发展很快。\"",
+  "text": "新西兰、澳大利亚和意大利的人工智能发展很快。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-new-zealand-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "新西兰",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-new-zealand-cn",
+    "suggestion": "紐西蘭"
+   },
+   {
+    "id": "term-australia-cn:4:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "澳大利亚",
+    "start": 4,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-australia-cn",
+    "suggestion": "澳洲"
+   },
+   {
+    "id": "term-italy-cn:9:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "意大利",
+    "start": 9,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-italy-cn",
+    "suggestion": "義大利"
+   },
+   {
+    "id": "term-ai-cn:13:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "人工智能",
+    "start": 13,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-ai-cn",
+    "suggestion": "人工智慧"
+   },
+   {
+    "id": "opencc:发>發:17:18:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"我的笔记本电脑和智能手机都有高清屏幕。\"",
+  "text": "我的笔记本电脑和智能手机都有高清屏幕。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-laptop-cn:2:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "笔记本电脑",
+    "start": 2,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-laptop-cn",
+    "suggestion": "筆記型電腦"
+   },
+   {
+    "id": "term-smartphone-cn:8:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "智能手机",
+    "start": 8,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-smartphone-cn",
+    "suggestion": "智慧型手機"
+   },
+   {
+    "id": "term-hd-cn:14:16:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "高清",
+    "start": 14,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "term-hd-cn",
+    "suggestion": "高畫質"
+   },
+   {
+    "id": "term-screen-cn:16:18:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "屏幕",
+    "start": 16,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "term-screen-cn",
+    "suggestion": "螢幕"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"台灣的台北有很多好吃的。\"",
+  "text": "台灣的台北有很多好吃的。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"用户使用户外设备。\"",
+  "text": "用户使用户外设备。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-user-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 0,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "term-user-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 3,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "opencc:设>設:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "设",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:设>設",
+    "suggestion": "設"
+   },
+   {
+    "id": "opencc:备>備:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "备",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:备>備",
+    "suggestion": "備"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"程序员在云计算平台上写博客。\"",
+  "text": "程序员在云计算平台上写博客。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-programmer-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "程序员",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-programmer-cn",
+    "suggestion": "程式設計師"
+   },
+   {
+    "id": "term-cloud-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "云计算",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-cloud-cn",
+    "suggestion": "雲端運算"
+   },
+   {
+    "id": "opencc:写>寫:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "写",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:写>寫",
+    "suggestion": "寫"
+   },
+   {
+    "id": "term-blog-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "博客",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-blog-cn",
+    "suggestion": "部落格"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"社交媒体上的短信和激光笔。\"",
+  "text": "社交媒体上的短信和激光笔。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-social-cn:0:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "社交媒体",
+    "start": 0,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-social-cn",
+    "suggestion": "社群媒體"
+   },
+   {
+    "id": "term-sms-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "短信",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-sms-cn",
+    "suggestion": "簡訊"
+   },
+   {
+    "id": "term-laser-cn:9:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "激光",
+    "start": 9,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-laser-cn",
+    "suggestion": "雷射"
+   },
+   {
+    "id": "opencc:笔>筆:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"Hello 世界 mixed English text 1",
+  "text": "Hello 世界 mixed English text 123 软件 and 軟體.",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:32:34:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 32,
+    "end": 34,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"  \\n\\t \"",
+  "text": "  \n\t ",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"\"",
+  "text": "",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"😀软件😀𠀀视频\"",
+  "text": "😀软件😀𠀀视频",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:2:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-video-cn:8:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 8,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"鼠标，键盘，显示器，内存，硬盘\"",
+  "text": "鼠标，键盘，显示器，内存，硬盘",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-mouse-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:键>鍵:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "键",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:键>鍵",
+    "suggestion": "鍵"
+   },
+   {
+    "id": "opencc:盘>盤:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   },
+   {
+    "id": "opencc:显>顯:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "显",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:显>顯",
+    "suggestion": "顯"
+   },
+   {
+    "id": "opencc:内>內:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "内",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:内>內",
+    "suggestion": "內"
+   },
+   {
+    "id": "term-harddisk-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "硬盘",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-harddisk-cn",
+    "suggestion": "硬碟"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"菠萝和西红柿，方便面，空调。\"",
+  "text": "菠萝和西红柿，方便面，空调。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-pineapple-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "菠萝",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-pineapple-cn",
+    "suggestion": "鳳梨"
+   },
+   {
+    "id": "term-tomato-cn:3:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "西红柿",
+    "start": 3,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-tomato-cn",
+    "suggestion": "番茄"
+   },
+   {
+    "id": "term-instant-noodle-cn:7:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "方便面",
+    "start": 7,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-instant-noodle-cn",
+    "suggestion": "泡麵"
+   },
+   {
+    "id": "term-aircon-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "空调",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-aircon-cn",
+    "suggestion": "冷氣"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"悉尼的巴士和的士。\"",
+  "text": "悉尼的巴士和的士。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-sydney-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "悉尼",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-sydney-cn",
+    "suggestion": "雪梨"
+   },
+   {
+    "id": "term-taxi-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "的士",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-taxi-hk",
+    "suggestion": "計程車"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"這個程式設計師在雲端運算上寫部落格。\"",
+  "text": "這個程式設計師在雲端運算上寫部落格。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap :: \"裡面的麵包和麪條，後面的皇后。\"",
+  "text": "裡面的麵包和麪條，後面的皇后。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-noodle-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "麪條",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-hk",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"著名的网络协议与信息安全。\"",
+  "text": "著名的网络协议与信息安全。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-network-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "网络",
+    "start": 3,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "term-network-cn",
+    "suggestion": "網路"
+   },
+   {
+    "id": "opencc:协>協:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "协",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:协>協",
+    "suggestion": "協"
+   },
+   {
+    "id": "opencc:议>議:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "议",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:议>議",
+    "suggestion": "議"
+   },
+   {
+    "id": "opencc:与>與:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "与",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:与>與",
+    "suggestion": "與"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"「引号」和《书名》，标点！\"",
+  "text": "「引号」和《书名》，标点！",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:号>號:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "号",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:号>號",
+    "suggestion": "號"
+   },
+   {
+    "id": "opencc:书>書:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "书",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:书>書",
+    "suggestion": "書"
+   },
+   {
+    "id": "opencc:标>標:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"㐷㐹 罕见字 兀 𪚥\"",
+  "text": "㐷㐹 罕见字 兀 𪚥",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:㐷>傌:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐷",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:㐷>傌",
+    "suggestion": "傌"
+   },
+   {
+    "id": "opencc:㐹>㑶:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐹",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:㐹>㑶",
+    "suggestion": "㑶"
+   },
+   {
+    "id": "opencc:见>見:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "见",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:见>見",
+    "suggestion": "見"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap :: \"软软软软软件件件\"",
+  "text": "软软软软软件件件",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "o-short",
+       "from": "软",
+       "to": "軟",
+       "enabled": true
+      },
+      {
+       "id": "o-long",
+       "from": "软件默认",
+       "to": "軟體預設值",
+       "enabled": true
+      },
+      {
+       "id": "o-mouse",
+       "from": "鼠",
+       "to": "滑",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "o-short:0:1:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "o-short",
+    "suggestion": "軟"
+   },
+   {
+    "id": "o-short:1:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "o-short",
+    "suggestion": "軟"
+   },
+   {
+    "id": "o-short:2:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "o-short",
+    "suggestion": "軟"
+   },
+   {
+    "id": "o-short:3:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "软",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "o-short",
+    "suggestion": "軟"
+   },
+   {
+    "id": "term-software-cn:4:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"这个软件默认支持上传。\"",
+  "text": "这个软件默认支持上传。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:这>這:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "这",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:这>這",
+    "suggestion": "這"
+   },
+   {
+    "id": "opencc:个>個:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "个",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:个>個",
+    "suggestion": "個"
+   },
+   {
+    "id": "term-software-cn:2:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-default-cn:4:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   },
+   {
+    "id": "term-support-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "支持",
+    "start": 6,
+    "end": 8,
+    "confidence": "medium",
+    "ruleId": "term-support-cn",
+    "suggestion": "支援"
+   },
+   {
+    "id": "opencc:传>傳:9:10:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "传",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:传>傳",
+    "suggestion": "傳"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"软件默认很好用。\"",
+  "text": "软件默认很好用。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-default-cn:2:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"這個軟體預設支援上傳。\"",
+  "text": "這個軟體預設支援上傳。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"請使用滑鼠點選連結並下載影片。\"",
+  "text": "請使用滑鼠點選連結並下載影片。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"服务器上的视频文件需要通过鼠标点击链接下载。\"",
+  "text": "服务器上的视频文件需要通过鼠标点击链接下载。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-server-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "服务器",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-server-cn",
+    "suggestion": "伺服器"
+   },
+   {
+    "id": "term-video-cn:5:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 5,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   },
+   {
+    "id": "opencc:过>過:12:13:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "过",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:过>過",
+    "suggestion": "過"
+   },
+   {
+    "id": "term-mouse-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:点>點:15:16:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   },
+   {
+    "id": "opencc:击>擊:16:17:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "击",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:击>擊",
+    "suggestion": "擊"
+   },
+   {
+    "id": "term-link-cn:17:19:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "链接",
+    "start": 17,
+    "end": 19,
+    "confidence": "high",
+    "ruleId": "term-link-cn",
+    "suggestion": "連結"
+   },
+   {
+    "id": "opencc:载>載:20:21:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "载",
+    "start": 20,
+    "end": 21,
+    "confidence": "high",
+    "ruleId": "opencc:载>載",
+    "suggestion": "載"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"皇后在后面，面条很好吃，面子很重要。\"",
+  "text": "皇后在后面，面条很好吃，面子很重要。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:后>後:3:4:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "后",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:后>後",
+    "suggestion": "後"
+   },
+   {
+    "id": "term-noodle-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "面条",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-cn",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"干擾里長若干人，頭髮發展。\"",
+  "text": "干擾里長若干人，頭髮發展。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"他发现了发财的办法，头发很长。\"",
+  "text": "他发现了发财的办法，头发很长。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:发>發:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:现>現:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "现",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:现>現",
+    "suggestion": "現"
+   },
+   {
+    "id": "opencc:发>發:4:5:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:财>財:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "财",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:财>財",
+    "suggestion": "財"
+   },
+   {
+    "id": "opencc:办>辦:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "办",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:办>辦",
+    "suggestion": "辦"
+   },
+   {
+    "id": "opencc:头>頭:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "头",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:头>頭",
+    "suggestion": "頭"
+   },
+   {
+    "id": "opencc:发>髮:11:12:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 11,
+    "end": 12,
+    "confidence": "medium",
+    "ruleId": "opencc:发>髮",
+    "suggestion": "髮"
+   },
+   {
+    "id": "opencc:长>長:13:14:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "长",
+    "start": 13,
+    "end": 14,
+    "confidence": "high",
+    "ruleId": "opencc:长>長",
+    "suggestion": "長"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"出租车、公交车和自行车都停在幼儿园门口。\"",
+  "text": "出租车、公交车和自行车都停在幼儿园门口。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-taxi-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "出租车",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-taxi-cn",
+    "suggestion": "計程車"
+   },
+   {
+    "id": "term-bus-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "公交车",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-bus-cn",
+    "suggestion": "公車"
+   },
+   {
+    "id": "term-bicycle-cn:8:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "自行车",
+    "start": 8,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-bicycle-cn",
+    "suggestion": "腳踏車"
+   },
+   {
+    "id": "term-kindergarten-cn:14:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "幼儿园",
+    "start": 14,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-kindergarten-cn",
+    "suggestion": "幼稚園"
+   },
+   {
+    "id": "opencc:门>門:17:18:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "门",
+    "start": 17,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "opencc:门>門",
+    "suggestion": "門"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"新西兰、澳大利亚和意大利的人工智能发展很快。\"",
+  "text": "新西兰、澳大利亚和意大利的人工智能发展很快。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-new-zealand-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "新西兰",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-new-zealand-cn",
+    "suggestion": "紐西蘭"
+   },
+   {
+    "id": "term-australia-cn:4:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "澳大利亚",
+    "start": 4,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-australia-cn",
+    "suggestion": "澳洲"
+   },
+   {
+    "id": "term-italy-cn:9:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "意大利",
+    "start": 9,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-italy-cn",
+    "suggestion": "義大利"
+   },
+   {
+    "id": "term-ai-cn:13:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "人工智能",
+    "start": 13,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-ai-cn",
+    "suggestion": "人工智慧"
+   },
+   {
+    "id": "opencc:发>發:17:18:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"我的笔记本电脑和智能手机都有高清屏幕。\"",
+  "text": "我的笔记本电脑和智能手机都有高清屏幕。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-laptop-cn:2:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "笔记本电脑",
+    "start": 2,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-laptop-cn",
+    "suggestion": "筆記型電腦"
+   },
+   {
+    "id": "term-smartphone-cn:8:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "智能手机",
+    "start": 8,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-smartphone-cn",
+    "suggestion": "智慧型手機"
+   },
+   {
+    "id": "term-hd-cn:14:16:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "高清",
+    "start": 14,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "term-hd-cn",
+    "suggestion": "高畫質"
+   },
+   {
+    "id": "term-screen-cn:16:18:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "屏幕",
+    "start": 16,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "term-screen-cn",
+    "suggestion": "螢幕"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"台灣的台北有很多好吃的。\"",
+  "text": "台灣的台北有很多好吃的。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"用户使用户外设备。\"",
+  "text": "用户使用户外设备。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-user-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 0,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "term-user-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 3,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "opencc:设>設:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "设",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:设>設",
+    "suggestion": "設"
+   },
+   {
+    "id": "opencc:备>備:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "备",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:备>備",
+    "suggestion": "備"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"程序员在云计算平台上写博客。\"",
+  "text": "程序员在云计算平台上写博客。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-programmer-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "程序员",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-programmer-cn",
+    "suggestion": "程式設計師"
+   },
+   {
+    "id": "term-cloud-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "云计算",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-cloud-cn",
+    "suggestion": "雲端運算"
+   },
+   {
+    "id": "opencc:写>寫:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "写",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:写>寫",
+    "suggestion": "寫"
+   },
+   {
+    "id": "term-blog-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "博客",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-blog-cn",
+    "suggestion": "部落格"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"社交媒体上的短信和激光笔。\"",
+  "text": "社交媒体上的短信和激光笔。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-social-cn:0:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "社交媒体",
+    "start": 0,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-social-cn",
+    "suggestion": "社群媒體"
+   },
+   {
+    "id": "term-sms-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "短信",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-sms-cn",
+    "suggestion": "簡訊"
+   },
+   {
+    "id": "term-laser-cn:9:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "激光",
+    "start": 9,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-laser-cn",
+    "suggestion": "雷射"
+   },
+   {
+    "id": "opencc:笔>筆:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"Hello 世界 mixed English text 1",
+  "text": "Hello 世界 mixed English text 123 软件 and 軟體.",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:32:34:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 32,
+    "end": 34,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"  \\n\\t \"",
+  "text": "  \n\t ",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"\"",
+  "text": "",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"😀软件😀𠀀视频\"",
+  "text": "😀软件😀𠀀视频",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:2:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-video-cn:8:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 8,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"鼠标，键盘，显示器，内存，硬盘\"",
+  "text": "鼠标，键盘，显示器，内存，硬盘",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-mouse-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:键>鍵:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "键",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:键>鍵",
+    "suggestion": "鍵"
+   },
+   {
+    "id": "opencc:盘>盤:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   },
+   {
+    "id": "opencc:显>顯:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "显",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:显>顯",
+    "suggestion": "顯"
+   },
+   {
+    "id": "opencc:内>內:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "内",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:内>內",
+    "suggestion": "內"
+   },
+   {
+    "id": "term-harddisk-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "硬盘",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-harddisk-cn",
+    "suggestion": "硬碟"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"菠萝和西红柿，方便面，空调。\"",
+  "text": "菠萝和西红柿，方便面，空调。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-pineapple-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "菠萝",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-pineapple-cn",
+    "suggestion": "鳳梨"
+   },
+   {
+    "id": "term-tomato-cn:3:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "西红柿",
+    "start": 3,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-tomato-cn",
+    "suggestion": "番茄"
+   },
+   {
+    "id": "term-instant-noodle-cn:7:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "方便面",
+    "start": 7,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-instant-noodle-cn",
+    "suggestion": "泡麵"
+   },
+   {
+    "id": "term-aircon-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "空调",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-aircon-cn",
+    "suggestion": "冷氣"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"悉尼的巴士和的士。\"",
+  "text": "悉尼的巴士和的士。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-sydney-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "悉尼",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-sydney-cn",
+    "suggestion": "雪梨"
+   },
+   {
+    "id": "term-taxi-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "的士",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-taxi-hk",
+    "suggestion": "計程車"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"這個程式設計師在雲端運算上寫部落格。\"",
+  "text": "這個程式設計師在雲端運算上寫部落格。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/user-overlap-late :: \"裡面的麵包和麪條，後面的皇后。\"",
+  "text": "裡面的麵包和麪條，後面的皇后。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-noodle-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "麪條",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-hk",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"著名的网络协议与信息安全。\"",
+  "text": "著名的网络协议与信息安全。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-network-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "网络",
+    "start": 3,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "term-network-cn",
+    "suggestion": "網路"
+   },
+   {
+    "id": "opencc:协>協:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "协",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:协>協",
+    "suggestion": "協"
+   },
+   {
+    "id": "opencc:议>議:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "议",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:议>議",
+    "suggestion": "議"
+   },
+   {
+    "id": "opencc:与>與:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "与",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:与>與",
+    "suggestion": "與"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"「引号」和《书名》，标点！\"",
+  "text": "「引号」和《书名》，标点！",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:号>號:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "号",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:号>號",
+    "suggestion": "號"
+   },
+   {
+    "id": "opencc:书>書:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "书",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:书>書",
+    "suggestion": "書"
+   },
+   {
+    "id": "opencc:标>標:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"㐷㐹 罕见字 兀 𪚥\"",
+  "text": "㐷㐹 罕见字 兀 𪚥",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:㐷>傌:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐷",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:㐷>傌",
+    "suggestion": "傌"
+   },
+   {
+    "id": "opencc:㐹>㑶:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐹",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:㐹>㑶",
+    "suggestion": "㑶"
+   },
+   {
+    "id": "opencc:见>見:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "见",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:见>見",
+    "suggestion": "見"
+   }
+  ]
+ },
+ {
+  "name": "tw/user-overlap-late :: \"软软软软软件件件\"",
+  "text": "软软软软软件件件",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "l-late",
+       "from": "件默",
+       "to": "件預",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "term-software-cn:4:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"这个软件默认支持上传。\"",
+  "text": "这个软件默认支持上传。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:这>這:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "这",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:这>這",
+    "suggestion": "這"
+   },
+   {
+    "id": "opencc:个>個:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "个",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:个>個",
+    "suggestion": "個"
+   },
+   {
+    "id": "term-default-cn:4:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   },
+   {
+    "id": "term-support-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "支持",
+    "start": 6,
+    "end": 8,
+    "confidence": "medium",
+    "ruleId": "term-support-cn",
+    "suggestion": "支援"
+   },
+   {
+    "id": "opencc:传>傳:9:10:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "传",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:传>傳",
+    "suggestion": "傳"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"软件默认很好用。\"",
+  "text": "软件默认很好用。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-default-cn:2:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"這個軟體預設支援上傳。\"",
+  "text": "這個軟體預設支援上傳。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"請使用滑鼠點選連結並下載影片。\"",
+  "text": "請使用滑鼠點選連結並下載影片。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"服务器上的视频文件需要通过鼠标点击链接下载。\"",
+  "text": "服务器上的视频文件需要通过鼠标点击链接下载。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-server-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "服务器",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-server-cn",
+    "suggestion": "伺服器"
+   },
+   {
+    "id": "a-video:5:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "视频",
+    "start": 5,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "a-video",
+    "suggestion": "視訊"
+   },
+   {
+    "id": "opencc:过>過:12:13:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "过",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:过>過",
+    "suggestion": "過"
+   },
+   {
+    "id": "term-mouse-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:点>點:15:16:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   },
+   {
+    "id": "opencc:击>擊:16:17:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "击",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:击>擊",
+    "suggestion": "擊"
+   },
+   {
+    "id": "term-link-cn:17:19:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "链接",
+    "start": 17,
+    "end": 19,
+    "confidence": "high",
+    "ruleId": "term-link-cn",
+    "suggestion": "連結"
+   },
+   {
+    "id": "opencc:载>載:20:21:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "载",
+    "start": 20,
+    "end": 21,
+    "confidence": "high",
+    "ruleId": "opencc:载>載",
+    "suggestion": "載"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"皇后在后面，面条很好吃，面子很重要。\"",
+  "text": "皇后在后面，面条很好吃，面子很重要。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:后>後:3:4:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "后",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:后>後",
+    "suggestion": "後"
+   },
+   {
+    "id": "term-noodle-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "面条",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-cn",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"干擾里長若干人，頭髮發展。\"",
+  "text": "干擾里長若干人，頭髮發展。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"他发现了发财的办法，头发很长。\"",
+  "text": "他发现了发财的办法，头发很长。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:发>發:1:2:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:现>現:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "现",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:现>現",
+    "suggestion": "現"
+   },
+   {
+    "id": "opencc:发>發:4:5:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:财>財:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "财",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:财>財",
+    "suggestion": "財"
+   },
+   {
+    "id": "opencc:办>辦:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "办",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:办>辦",
+    "suggestion": "辦"
+   },
+   {
+    "id": "opencc:头>頭:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "头",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:头>頭",
+    "suggestion": "頭"
+   },
+   {
+    "id": "opencc:发>髮:11:12:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 11,
+    "end": 12,
+    "confidence": "medium",
+    "ruleId": "opencc:发>髮",
+    "suggestion": "髮"
+   },
+   {
+    "id": "opencc:长>長:13:14:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "长",
+    "start": 13,
+    "end": 14,
+    "confidence": "high",
+    "ruleId": "opencc:长>長",
+    "suggestion": "長"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"出租车、公交车和自行车都停在幼儿园门口。\"",
+  "text": "出租车、公交车和自行车都停在幼儿园门口。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-taxi-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "出租车",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-taxi-cn",
+    "suggestion": "計程車"
+   },
+   {
+    "id": "term-bus-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "公交车",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-bus-cn",
+    "suggestion": "公車"
+   },
+   {
+    "id": "term-bicycle-cn:8:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "自行车",
+    "start": 8,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-bicycle-cn",
+    "suggestion": "腳踏車"
+   },
+   {
+    "id": "term-kindergarten-cn:14:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "幼儿园",
+    "start": 14,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-kindergarten-cn",
+    "suggestion": "幼稚園"
+   },
+   {
+    "id": "opencc:门>門:17:18:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "门",
+    "start": 17,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "opencc:门>門",
+    "suggestion": "門"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"新西兰、澳大利亚和意大利的人工智能发展很快。\"",
+  "text": "新西兰、澳大利亚和意大利的人工智能发展很快。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-new-zealand-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "新西兰",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-new-zealand-cn",
+    "suggestion": "紐西蘭"
+   },
+   {
+    "id": "term-australia-cn:4:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "澳大利亚",
+    "start": 4,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-australia-cn",
+    "suggestion": "澳洲"
+   },
+   {
+    "id": "term-italy-cn:9:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "意大利",
+    "start": 9,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-italy-cn",
+    "suggestion": "義大利"
+   },
+   {
+    "id": "term-ai-cn:13:17:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "人工智能",
+    "start": 13,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-ai-cn",
+    "suggestion": "人工智慧"
+   },
+   {
+    "id": "opencc:发>發:17:18:zh-TW",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"我的笔记本电脑和智能手机都有高清屏幕。\"",
+  "text": "我的笔记本电脑和智能手机都有高清屏幕。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-laptop-cn:2:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "笔记本电脑",
+    "start": 2,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-laptop-cn",
+    "suggestion": "筆記型電腦"
+   },
+   {
+    "id": "term-smartphone-cn:8:12:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "智能手机",
+    "start": 8,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-smartphone-cn",
+    "suggestion": "智慧型手機"
+   },
+   {
+    "id": "term-hd-cn:14:16:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "高清",
+    "start": 14,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "term-hd-cn",
+    "suggestion": "高畫質"
+   },
+   {
+    "id": "term-screen-cn:16:18:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "屏幕",
+    "start": 16,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "term-screen-cn",
+    "suggestion": "螢幕"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"台灣的台北有很多好吃的。\"",
+  "text": "台灣的台北有很多好吃的。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"用户使用户外设备。\"",
+  "text": "用户使用户外设备。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-user-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 0,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "term-user-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 3,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "opencc:设>設:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "设",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:设>設",
+    "suggestion": "設"
+   },
+   {
+    "id": "opencc:备>備:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "备",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:备>備",
+    "suggestion": "備"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"程序员在云计算平台上写博客。\"",
+  "text": "程序员在云计算平台上写博客。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-programmer-cn:0:3:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "程序员",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-programmer-cn",
+    "suggestion": "程式設計師"
+   },
+   {
+    "id": "term-cloud-cn:4:7:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "云计算",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-cloud-cn",
+    "suggestion": "雲端運算"
+   },
+   {
+    "id": "opencc:写>寫:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "写",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:写>寫",
+    "suggestion": "寫"
+   },
+   {
+    "id": "term-blog-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "博客",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-blog-cn",
+    "suggestion": "部落格"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"社交媒体上的短信和激光笔。\"",
+  "text": "社交媒体上的短信和激光笔。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-social-cn:0:4:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "社交媒体",
+    "start": 0,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-social-cn",
+    "suggestion": "社群媒體"
+   },
+   {
+    "id": "term-sms-cn:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "短信",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-sms-cn",
+    "suggestion": "簡訊"
+   },
+   {
+    "id": "term-laser-cn:9:11:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "激光",
+    "start": 9,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-laser-cn",
+    "suggestion": "雷射"
+   },
+   {
+    "id": "opencc:笔>筆:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"Hello 世界 mixed English text 1",
+  "text": "Hello 世界 mixed English text 123 软件 and 軟體.",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"  \\n\\t \"",
+  "text": "  \n\t ",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"\"",
+  "text": "",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"😀软件😀𠀀视频\"",
+  "text": "😀软件😀𠀀视频",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "a-video:8:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "视频",
+    "start": 8,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "a-video",
+    "suggestion": "視訊"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"鼠标，键盘，显示器，内存，硬盘\"",
+  "text": "鼠标，键盘，显示器，内存，硬盘",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-mouse-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:键>鍵:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "键",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:键>鍵",
+    "suggestion": "鍵"
+   },
+   {
+    "id": "opencc:盘>盤:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   },
+   {
+    "id": "opencc:显>顯:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "显",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:显>顯",
+    "suggestion": "顯"
+   },
+   {
+    "id": "opencc:内>內:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "内",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:内>內",
+    "suggestion": "內"
+   },
+   {
+    "id": "term-harddisk-cn:13:15:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "硬盘",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-harddisk-cn",
+    "suggestion": "硬碟"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"菠萝和西红柿，方便面，空调。\"",
+  "text": "菠萝和西红柿，方便面，空调。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-pineapple-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "菠萝",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-pineapple-cn",
+    "suggestion": "鳳梨"
+   },
+   {
+    "id": "term-tomato-cn:3:6:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "西红柿",
+    "start": 3,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-tomato-cn",
+    "suggestion": "番茄"
+   },
+   {
+    "id": "term-instant-noodle-cn:7:10:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "方便面",
+    "start": 7,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-instant-noodle-cn",
+    "suggestion": "泡麵"
+   },
+   {
+    "id": "term-aircon-cn:11:13:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "空调",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-aircon-cn",
+    "suggestion": "冷氣"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"悉尼的巴士和的士。\"",
+  "text": "悉尼的巴士和的士。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-sydney-cn:0:2:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "悉尼",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-sydney-cn",
+    "suggestion": "雪梨"
+   },
+   {
+    "id": "term-taxi-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "的士",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-taxi-hk",
+    "suggestion": "計程車"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"這個程式設計師在雲端運算上寫部落格。\"",
+  "text": "這個程式設計師在雲端運算上寫部落格。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"裡面的麵包和麪條，後面的皇后。\"",
+  "text": "裡面的麵包和麪條，後面的皇后。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-noodle-hk:6:8:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "麪條",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-hk",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"著名的网络协议与信息安全。\"",
+  "text": "著名的网络协议与信息安全。",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-network-cn:3:5:zh-TW",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "网络",
+    "start": 3,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "term-network-cn",
+    "suggestion": "網路"
+   },
+   {
+    "id": "opencc:协>協:5:6:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "协",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:协>協",
+    "suggestion": "協"
+   },
+   {
+    "id": "opencc:议>議:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "议",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:议>議",
+    "suggestion": "議"
+   },
+   {
+    "id": "opencc:与>與:7:8:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "与",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:与>與",
+    "suggestion": "與"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"「引号」和《书名》，标点！\"",
+  "text": "「引号」和《书名》，标点！",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:号>號:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "号",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:号>號",
+    "suggestion": "號"
+   },
+   {
+    "id": "opencc:书>書:6:7:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "书",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:书>書",
+    "suggestion": "書"
+   },
+   {
+    "id": "opencc:标>標:10:11:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:11:12:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"㐷㐹 罕见字 兀 𪚥\"",
+  "text": "㐷㐹 罕见字 兀 𪚥",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:㐷>傌:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐷",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:㐷>傌",
+    "suggestion": "傌"
+   },
+   {
+    "id": "opencc:㐹>㑶:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐹",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:㐹>㑶",
+    "suggestion": "㑶"
+   },
+   {
+    "id": "opencc:见>見:4:5:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "见",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:见>見",
+    "suggestion": "見"
+   }
+  ]
+ },
+ {
+  "name": "tw/allow-user-phrase :: \"软软软软软件件件\"",
+  "text": "软软软软软件件件",
+  "settings": {
+   "defaultVariant": "zh-TW",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "allowPhrases": {
+     "zh-TW": [
+      "软件"
+     ]
+    },
+    "phrases": {
+     "zh-TW": [
+      {
+       "id": "a-software",
+       "from": "软件",
+       "to": "軟件",
+       "enabled": true
+      },
+      {
+       "id": "a-video",
+       "from": "视频",
+       "to": "視訊",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:0:1:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:1:2:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:2:3:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:3:4:zh-TW",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"这个软件默认支持上传。\"",
+  "text": "这个软件默认支持上传。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:这>這:0:1:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "这",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:这>這",
+    "suggestion": "這"
+   },
+   {
+    "id": "opencc:个>個:1:2:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "个",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:个>個",
+    "suggestion": "個"
+   },
+   {
+    "id": "term-software-cn:2:4:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-default-cn:4:6:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   },
+   {
+    "id": "term-support-cn:6:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "支持",
+    "start": 6,
+    "end": 8,
+    "confidence": "medium",
+    "ruleId": "term-support-cn",
+    "suggestion": "支援"
+   },
+   {
+    "id": "opencc:传>傳:9:10:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "传",
+    "start": 9,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "opencc:传>傳",
+    "suggestion": "傳"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"软件默认很好用。\"",
+  "text": "软件默认很好用。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:0:2:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-default-cn:2:4:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "默认",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-default-cn",
+    "suggestion": "預設"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"這個軟體預設支援上傳。\"",
+  "text": "這個軟體預設支援上傳。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"請使用滑鼠點選連結並下載影片。\"",
+  "text": "請使用滑鼠點選連結並下載影片。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"服务器上的视频文件需要通过鼠标点击链接下载。\"",
+  "text": "服务器上的视频文件需要通过鼠标点击链接下载。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "h-server:0:3:zh-Hant",
+    "type": "variant_term",
+    "subtype": "user-phrase",
+    "sourceText": "服务器",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "h-server",
+    "suggestion": "伺服器"
+   },
+   {
+    "id": "term-video-cn:5:7:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 5,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   },
+   {
+    "id": "opencc:过>過:12:13:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "过",
+    "start": 12,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "opencc:过>過",
+    "suggestion": "過"
+   },
+   {
+    "id": "term-mouse-cn:13:15:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:点>點:15:16:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 15,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   },
+   {
+    "id": "opencc:击>擊:16:17:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "击",
+    "start": 16,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "opencc:击>擊",
+    "suggestion": "擊"
+   },
+   {
+    "id": "term-link-cn:17:19:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "链接",
+    "start": 17,
+    "end": 19,
+    "confidence": "high",
+    "ruleId": "term-link-cn",
+    "suggestion": "連結"
+   },
+   {
+    "id": "opencc:载>載:20:21:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "载",
+    "start": 20,
+    "end": 21,
+    "confidence": "high",
+    "ruleId": "opencc:载>載",
+    "suggestion": "載"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"皇后在后面，面条很好吃，面子很重要。\"",
+  "text": "皇后在后面，面条很好吃，面子很重要。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:后>後:3:4:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "后",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:后>後",
+    "suggestion": "後"
+   },
+   {
+    "id": "term-noodle-cn:6:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "面条",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-cn",
+    "suggestion": "麵條"
+   },
+   {
+    "id": "opencc:吃>喫:10:11:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "吃",
+    "start": 10,
+    "end": 11,
+    "confidence": "medium",
+    "ruleId": "opencc:吃>喫",
+    "suggestion": "喫"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"干擾里長若干人，頭髮發展。\"",
+  "text": "干擾里長若干人，頭髮發展。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"他发现了发财的办法，头发很长。\"",
+  "text": "他发现了发财的办法，头发很长。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:发>發:1:2:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 1,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:现>現:2:3:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "现",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:现>現",
+    "suggestion": "現"
+   },
+   {
+    "id": "opencc:发>發:4:5:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 4,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   },
+   {
+    "id": "opencc:财>財:5:6:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "财",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:财>財",
+    "suggestion": "財"
+   },
+   {
+    "id": "opencc:办>辦:7:8:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "办",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:办>辦",
+    "suggestion": "辦"
+   },
+   {
+    "id": "opencc:头>頭:10:11:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "头",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:头>頭",
+    "suggestion": "頭"
+   },
+   {
+    "id": "opencc:发>髮:11:12:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 11,
+    "end": 12,
+    "confidence": "medium",
+    "ruleId": "opencc:发>髮",
+    "suggestion": "髮"
+   },
+   {
+    "id": "opencc:长>長:13:14:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "长",
+    "start": 13,
+    "end": 14,
+    "confidence": "high",
+    "ruleId": "opencc:长>長",
+    "suggestion": "長"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"出租车、公交车和自行车都停在幼儿园门口。\"",
+  "text": "出租车、公交车和自行车都停在幼儿园门口。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-taxi-cn:0:3:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "出租车",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-taxi-cn",
+    "suggestion": "計程車"
+   },
+   {
+    "id": "term-bus-cn:4:7:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "公交车",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-bus-cn",
+    "suggestion": "公車"
+   },
+   {
+    "id": "term-bicycle-cn:8:11:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "自行车",
+    "start": 8,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-bicycle-cn",
+    "suggestion": "腳踏車"
+   },
+   {
+    "id": "term-kindergarten-cn:14:17:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "幼儿园",
+    "start": 14,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-kindergarten-cn",
+    "suggestion": "幼稚園"
+   },
+   {
+    "id": "opencc:门>門:17:18:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "门",
+    "start": 17,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "opencc:门>門",
+    "suggestion": "門"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"新西兰、澳大利亚和意大利的人工智能发展很快。\"",
+  "text": "新西兰、澳大利亚和意大利的人工智能发展很快。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-new-zealand-cn:0:3:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "新西兰",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-new-zealand-cn",
+    "suggestion": "紐西蘭"
+   },
+   {
+    "id": "term-australia-cn:4:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "澳大利亚",
+    "start": 4,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-australia-cn",
+    "suggestion": "澳洲"
+   },
+   {
+    "id": "term-italy-cn:9:12:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "意大利",
+    "start": 9,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-italy-cn",
+    "suggestion": "義大利"
+   },
+   {
+    "id": "term-ai-cn:13:17:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "人工智能",
+    "start": 13,
+    "end": 17,
+    "confidence": "high",
+    "ruleId": "term-ai-cn",
+    "suggestion": "人工智慧"
+   },
+   {
+    "id": "opencc:发>發:17:18:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "发",
+    "start": 17,
+    "end": 18,
+    "confidence": "medium",
+    "ruleId": "opencc:发>發",
+    "suggestion": "發"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"我的笔记本电脑和智能手机都有高清屏幕。\"",
+  "text": "我的笔记本电脑和智能手机都有高清屏幕。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-laptop-cn:2:7:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "笔记本电脑",
+    "start": 2,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-laptop-cn",
+    "suggestion": "筆記型電腦"
+   },
+   {
+    "id": "term-smartphone-cn:8:12:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "智能手机",
+    "start": 8,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "term-smartphone-cn",
+    "suggestion": "智慧型手機"
+   },
+   {
+    "id": "term-hd-cn:14:16:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "高清",
+    "start": 14,
+    "end": 16,
+    "confidence": "high",
+    "ruleId": "term-hd-cn",
+    "suggestion": "高畫質"
+   },
+   {
+    "id": "term-screen-cn:16:18:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "屏幕",
+    "start": 16,
+    "end": 18,
+    "confidence": "high",
+    "ruleId": "term-screen-cn",
+    "suggestion": "螢幕"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"台灣的台北有很多好吃的。\"",
+  "text": "台灣的台北有很多好吃的。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:台>臺:0:1:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "台",
+    "start": 0,
+    "end": 1,
+    "confidence": "medium",
+    "ruleId": "opencc:台>臺",
+    "suggestion": "臺"
+   },
+   {
+    "id": "opencc:台>臺:3:4:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "台",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:台>臺",
+    "suggestion": "臺"
+   },
+   {
+    "id": "opencc:吃>喫:9:10:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "吃",
+    "start": 9,
+    "end": 10,
+    "confidence": "medium",
+    "ruleId": "opencc:吃>喫",
+    "suggestion": "喫"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"用户使用户外设备。\"",
+  "text": "用户使用户外设备。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-user-cn:0:2:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 0,
+    "end": 2,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "term-user-cn:3:5:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "用户",
+    "start": 3,
+    "end": 5,
+    "confidence": "medium",
+    "ruleId": "term-user-cn",
+    "suggestion": "使用者"
+   },
+   {
+    "id": "opencc:设>設:6:7:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "设",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:设>設",
+    "suggestion": "設"
+   },
+   {
+    "id": "opencc:备>備:7:8:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "备",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:备>備",
+    "suggestion": "備"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"程序员在云计算平台上写博客。\"",
+  "text": "程序员在云计算平台上写博客。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-programmer-cn:0:3:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "程序员",
+    "start": 0,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "term-programmer-cn",
+    "suggestion": "程式設計師"
+   },
+   {
+    "id": "term-cloud-cn:4:7:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "云计算",
+    "start": 4,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "term-cloud-cn",
+    "suggestion": "雲端運算"
+   },
+   {
+    "id": "opencc:台>臺:8:9:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "台",
+    "start": 8,
+    "end": 9,
+    "confidence": "medium",
+    "ruleId": "opencc:台>臺",
+    "suggestion": "臺"
+   },
+   {
+    "id": "opencc:写>寫:10:11:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "写",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:写>寫",
+    "suggestion": "寫"
+   },
+   {
+    "id": "term-blog-cn:11:13:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "博客",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-blog-cn",
+    "suggestion": "部落格"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"社交媒体上的短信和激光笔。\"",
+  "text": "社交媒体上的短信和激光笔。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-social-cn:0:4:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "社交媒体",
+    "start": 0,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-social-cn",
+    "suggestion": "社群媒體"
+   },
+   {
+    "id": "term-sms-cn:6:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "短信",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-sms-cn",
+    "suggestion": "簡訊"
+   },
+   {
+    "id": "term-laser-cn:9:11:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "激光",
+    "start": 9,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "term-laser-cn",
+    "suggestion": "雷射"
+   },
+   {
+    "id": "opencc:笔>筆:11:12:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "笔",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:笔>筆",
+    "suggestion": "筆"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"Hello 世界 mixed English text 1",
+  "text": "Hello 世界 mixed English text 123 软件 and 軟體.",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:32:34:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 32,
+    "end": 34,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"  \\n\\t \"",
+  "text": "  \n\t ",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"\"",
+  "text": "",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"😀软件😀𠀀视频\"",
+  "text": "😀软件😀𠀀视频",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-software-cn:2:4:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 2,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   },
+   {
+    "id": "term-video-cn:8:10:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "视频",
+    "start": 8,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-video-cn",
+    "suggestion": "影片"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"鼠标，键盘，显示器，内存，硬盘\"",
+  "text": "鼠标，键盘，显示器，内存，硬盘",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-mouse-cn:0:2:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "鼠标",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-mouse-cn",
+    "suggestion": "滑鼠"
+   },
+   {
+    "id": "opencc:键>鍵:3:4:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "键",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:键>鍵",
+    "suggestion": "鍵"
+   },
+   {
+    "id": "opencc:盘>盤:4:5:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "盘",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:盘>盤",
+    "suggestion": "盤"
+   },
+   {
+    "id": "opencc:显>顯:6:7:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "显",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:显>顯",
+    "suggestion": "顯"
+   },
+   {
+    "id": "opencc:内>內:10:11:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "内",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:内>內",
+    "suggestion": "內"
+   },
+   {
+    "id": "term-harddisk-cn:13:15:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "硬盘",
+    "start": 13,
+    "end": 15,
+    "confidence": "high",
+    "ruleId": "term-harddisk-cn",
+    "suggestion": "硬碟"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"菠萝和西红柿，方便面，空调。\"",
+  "text": "菠萝和西红柿，方便面，空调。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-pineapple-cn:0:2:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "菠萝",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-pineapple-cn",
+    "suggestion": "鳳梨"
+   },
+   {
+    "id": "term-tomato-cn:3:6:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "西红柿",
+    "start": 3,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-tomato-cn",
+    "suggestion": "番茄"
+   },
+   {
+    "id": "term-instant-noodle-cn:7:10:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "方便面",
+    "start": 7,
+    "end": 10,
+    "confidence": "high",
+    "ruleId": "term-instant-noodle-cn",
+    "suggestion": "泡麵"
+   },
+   {
+    "id": "term-aircon-cn:11:13:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "空调",
+    "start": 11,
+    "end": 13,
+    "confidence": "high",
+    "ruleId": "term-aircon-cn",
+    "suggestion": "冷氣"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"悉尼的巴士和的士。\"",
+  "text": "悉尼的巴士和的士。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-sydney-cn:0:2:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "悉尼",
+    "start": 0,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "term-sydney-cn",
+    "suggestion": "雪梨"
+   },
+   {
+    "id": "term-taxi-hk:6:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "的士",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-taxi-hk",
+    "suggestion": "計程車"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"這個程式設計師在雲端運算上寫部落格。\"",
+  "text": "這個程式設計師在雲端運算上寫部落格。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": []
+ },
+ {
+  "name": "hant/user-phrase :: \"裡面的麵包和麪條，後面的皇后。\"",
+  "text": "裡面的麵包和麪條，後面的皇后。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:裡>裏:0:1:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "裡",
+    "start": 0,
+    "end": 1,
+    "confidence": "medium",
+    "ruleId": "opencc:裡>裏",
+    "suggestion": "裏"
+   },
+   {
+    "id": "opencc:麵>麪:3:4:zh-Hant",
+    "type": "script",
+    "subtype": "context-sensitive-char",
+    "sourceText": "麵",
+    "start": 3,
+    "end": 4,
+    "confidence": "medium",
+    "ruleId": "opencc:麵>麪",
+    "suggestion": "麪"
+   },
+   {
+    "id": "term-noodle-hk:6:8:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "麪條",
+    "start": 6,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "term-noodle-hk",
+    "suggestion": "麵條"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"著名的网络协议与信息安全。\"",
+  "text": "著名的网络协议与信息安全。",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "term-network-cn:3:5:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "网络",
+    "start": 3,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "term-network-cn",
+    "suggestion": "網路"
+   },
+   {
+    "id": "opencc:协>協:5:6:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "协",
+    "start": 5,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "opencc:协>協",
+    "suggestion": "協"
+   },
+   {
+    "id": "opencc:议>議:6:7:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "议",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:议>議",
+    "suggestion": "議"
+   },
+   {
+    "id": "opencc:与>與:7:8:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "与",
+    "start": 7,
+    "end": 8,
+    "confidence": "high",
+    "ruleId": "opencc:与>與",
+    "suggestion": "與"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"「引号」和《书名》，标点！\"",
+  "text": "「引号」和《书名》，标点！",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:号>號:2:3:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "号",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:号>號",
+    "suggestion": "號"
+   },
+   {
+    "id": "opencc:书>書:6:7:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "书",
+    "start": 6,
+    "end": 7,
+    "confidence": "high",
+    "ruleId": "opencc:书>書",
+    "suggestion": "書"
+   },
+   {
+    "id": "opencc:标>標:10:11:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "标",
+    "start": 10,
+    "end": 11,
+    "confidence": "high",
+    "ruleId": "opencc:标>標",
+    "suggestion": "標"
+   },
+   {
+    "id": "opencc:点>點:11:12:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "点",
+    "start": 11,
+    "end": 12,
+    "confidence": "high",
+    "ruleId": "opencc:点>點",
+    "suggestion": "點"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"㐷㐹 罕见字 兀 𪚥\"",
+  "text": "㐷㐹 罕见字 兀 𪚥",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:㐷>傌:0:1:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐷",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:㐷>傌",
+    "suggestion": "傌"
+   },
+   {
+    "id": "opencc:㐹>㑶:1:2:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "㐹",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:㐹>㑶",
+    "suggestion": "㑶"
+   },
+   {
+    "id": "opencc:见>見:4:5:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "见",
+    "start": 4,
+    "end": 5,
+    "confidence": "high",
+    "ruleId": "opencc:见>見",
+    "suggestion": "見"
+   }
+  ]
+ },
+ {
+  "name": "hant/user-phrase :: \"软软软软软件件件\"",
+  "text": "软软软软软件件件",
+  "settings": {
+   "defaultVariant": "zh-Hant",
+   "detectionLevel": "standard",
+   "userDictionary": {
+    "phrases": {
+     "zh-Hant": [
+      {
+       "id": "h-server",
+       "from": "服务器",
+       "to": "伺服器",
+       "enabled": true
+      }
+     ]
+    }
+   }
+  },
+  "expected": [
+   {
+    "id": "opencc:软>軟:0:1:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 0,
+    "end": 1,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:1:2:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 1,
+    "end": 2,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:2:3:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 2,
+    "end": 3,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "opencc:软>軟:3:4:zh-Hant",
+    "type": "script",
+    "subtype": "safe-char",
+    "sourceText": "软",
+    "start": 3,
+    "end": 4,
+    "confidence": "high",
+    "ruleId": "opencc:软>軟",
+    "suggestion": "軟"
+   },
+   {
+    "id": "term-software-cn:4:6:zh-Hant",
+    "type": "variant_term",
+    "subtype": "builtin-term",
+    "sourceText": "软件",
+    "start": 4,
+    "end": 6,
+    "confidence": "high",
+    "ruleId": "term-software-cn",
+    "suggestion": "軟體"
+   }
+  ]
  }
 ]
