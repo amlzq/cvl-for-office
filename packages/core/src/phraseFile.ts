@@ -21,6 +21,20 @@ export const PHRASE_CSV_HEADER = ["from", "to"] as const;
 export const MAX_PHRASES_PER_VARIANT = 1000;
 /** 导入文件大小上限（字节），避免误选超大文件。 */
 export const MAX_IMPORT_FILE_BYTES = 1024 * 1024;
+/** 词典页每批渲染的词组数，与浏览器扩展版一致。 */
+export const PHRASE_PAGE_SIZE = 100;
+
+/**
+ * 按原词或替换词做不区分大小写的包含匹配；空查询返回全部。
+ * 与浏览器扩展版 filterPhrases 行为一致。
+ */
+export function filterPhrases<T>(items: readonly T[], query: string, columns: (item: T) => readonly [string, string]): T[] {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    return [...items];
+  }
+  return items.filter((item) => columns(item).some((value) => value.toLowerCase().includes(q)));
+}
 
 export const PHRASE_TEMPLATE_ROWS: readonly PhraseRow[] = [
   { from: "软件", to: "軟體" },
@@ -205,12 +219,13 @@ export function importPhrases(
     }
     const existing = phrases.findIndex((p) => p.variant === variant && p.source === source);
     if (existing >= 0) {
-      phrases[existing] = { variant, source, target };
+      // 保留停用状态：更新替换词不应把用户停用过的词条重新启用。
+      phrases[existing] = { ...phrases[existing], variant, source, target };
       updated += 1;
     } else if (count >= MAX_PHRASES_PER_VARIANT) {
       skipped += 1;
     } else {
-      phrases.push({ variant, source, target });
+      phrases.push({ variant, source, target, enabled: true });
       count += 1;
       added += 1;
     }

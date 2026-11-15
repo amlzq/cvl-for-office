@@ -108,7 +108,7 @@ const USER_PRIORITY = 10_000;
 /** 用户词组转为词汇规则，与内置规则一起参与匹配（与扩展版 loadRuleBundle 一致）。 */
 function userTermRules(variant: VariantCode, dictionary?: UserDictionary): VariantTermRule[] {
   return (dictionary?.phrases ?? [])
-    .filter((phrase) => phrase.variant === variant)
+    .filter((phrase) => phrase.variant === variant && phrase.enabled !== false)
     .map((phrase) => ({
       id: `user:${phrase.source}`,
       kind: "variant_term" as const,

@@ -14,7 +14,8 @@
     "stop:ms": "npm run stop -w @cvl/host-ms",
     "build:ms": "npm run build -w @cvl/host-ms",
     "validate:ms": "npm run validate -w @cvl/host-ms",
-    "sync:vectors": "node scripts/sync-test-vectors.mjs"
+    "sync:vectors": "node scripts/sync-test-vectors.mjs",
+    "check:shared": "node scripts/sync-test-vectors.mjs --check"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

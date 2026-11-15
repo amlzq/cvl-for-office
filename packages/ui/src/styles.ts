@@ -35,5 +35,8 @@ export const CSS = `
 .cvl .pair input { flex: 1; min-width: 0; padding: 4px 6px; font: inherit; }
 .cvl ul.plain { margin: 4px 0; }
 .cvl ul.plain li { cursor: default; border: 0; padding: 2px 0; margin: 0; display: flex; align-items: center; gap: 4px; }
+.cvl h2.group { font-size: 12px; font-weight: 600; margin: 12px 0 4px; color: #444; }
 .cvl ul.plain li .link { margin-left: auto; }
+.cvl ul.plain li.off .src, .cvl ul.plain li.off .dst { opacity: .45; }
+.cvl ul.plain li input[type=checkbox] { margin: 0; }
 `;

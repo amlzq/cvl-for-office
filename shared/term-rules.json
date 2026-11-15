@@ -1,0 +1,1957 @@
+[
+ {
+  "id": "term-software-cn",
+  "kind": "variant_term",
+  "sourceTerm": "软件",
+  "targets": {
+   "zh-TW": "軟體",
+   "zh-HK": "軟件",
+   "zh-Hant": "軟體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin",
+  "tags": [
+   "required-sample"
+  ]
+ },
+ {
+  "id": "term-software-tw",
+  "kind": "variant_term",
+  "sourceTerm": "軟體",
+  "targets": {
+   "zh-CN": "软件",
+   "zh-HK": "軟件"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin",
+  "tags": [
+   "required-sample"
+  ]
+ },
+ {
+  "id": "term-software-hk",
+  "kind": "variant_term",
+  "sourceTerm": "軟件",
+  "targets": {
+   "zh-CN": "软件",
+   "zh-TW": "軟體",
+   "zh-Hant": "軟體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin",
+  "tags": [
+   "required-sample"
+  ]
+ },
+ {
+  "id": "term-video-cn",
+  "kind": "variant_term",
+  "sourceTerm": "视频",
+  "targets": {
+   "zh-TW": "影片",
+   "zh-HK": "影片",
+   "zh-Hant": "影片"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-video-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "視頻",
+  "targets": {
+   "zh-CN": "视频",
+   "zh-TW": "影片",
+   "zh-HK": "影片",
+   "zh-Hant": "影片"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-video-tw",
+  "kind": "variant_term",
+  "sourceTerm": "影片",
+  "targets": {
+   "zh-CN": "视频"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-taxi-cn",
+  "kind": "variant_term",
+  "sourceTerm": "出租车",
+  "targets": {
+   "zh-TW": "計程車",
+   "zh-HK": "的士",
+   "zh-Hant": "計程車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-taxi-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "出租車",
+  "targets": {
+   "zh-CN": "出租车",
+   "zh-TW": "計程車",
+   "zh-HK": "的士",
+   "zh-Hant": "計程車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-taxi-tw",
+  "kind": "variant_term",
+  "sourceTerm": "計程車",
+  "targets": {
+   "zh-CN": "出租车",
+   "zh-HK": "的士"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-taxi-hk",
+  "kind": "variant_term",
+  "sourceTerm": "的士",
+  "targets": {
+   "zh-CN": "出租车",
+   "zh-TW": "計程車",
+   "zh-Hant": "計程車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-noodle-cn",
+  "kind": "variant_term",
+  "sourceTerm": "面条",
+  "targets": {
+   "zh-TW": "麵條",
+   "zh-HK": "麪條",
+   "zh-Hant": "麵條"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-noodle-tw",
+  "kind": "variant_term",
+  "sourceTerm": "麵條",
+  "targets": {
+   "zh-CN": "面条",
+   "zh-HK": "麪條"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-noodle-hk",
+  "kind": "variant_term",
+  "sourceTerm": "麪條",
+  "targets": {
+   "zh-CN": "面条",
+   "zh-TW": "麵條",
+   "zh-Hant": "麵條"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-mouse-cn",
+  "kind": "variant_term",
+  "sourceTerm": "鼠标",
+  "targets": {
+   "zh-TW": "滑鼠",
+   "zh-HK": "滑鼠",
+   "zh-Hant": "滑鼠"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-mouse-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "鼠標",
+  "targets": {
+   "zh-CN": "鼠标",
+   "zh-TW": "滑鼠",
+   "zh-HK": "滑鼠",
+   "zh-Hant": "滑鼠"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-mouse-tw",
+  "kind": "variant_term",
+  "sourceTerm": "滑鼠",
+  "targets": {
+   "zh-CN": "鼠标"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-login-cn",
+  "kind": "variant_term",
+  "sourceTerm": "登录",
+  "targets": {
+   "zh-TW": "登入",
+   "zh-HK": "登入",
+   "zh-Hant": "登入"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-login-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "登錄",
+  "targets": {
+   "zh-CN": "登录",
+   "zh-TW": "登入",
+   "zh-HK": "登入",
+   "zh-Hant": "登入"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-login-tw",
+  "kind": "variant_term",
+  "sourceTerm": "登入",
+  "targets": {
+   "zh-CN": "登录"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-support-cn",
+  "kind": "variant_term",
+  "sourceTerm": "支持",
+  "targets": {
+   "zh-TW": "支援",
+   "zh-HK": "支援",
+   "zh-Hant": "支援"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-support-tw",
+  "kind": "variant_term",
+  "sourceTerm": "支援",
+  "targets": {
+   "zh-CN": "支持"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-default-cn",
+  "kind": "variant_term",
+  "sourceTerm": "默认",
+  "targets": {
+   "zh-TW": "預設",
+   "zh-HK": "預設",
+   "zh-Hant": "預設"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-default-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "默認",
+  "targets": {
+   "zh-CN": "默认",
+   "zh-TW": "預設",
+   "zh-HK": "預設",
+   "zh-Hant": "預設"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-default-tw",
+  "kind": "variant_term",
+  "sourceTerm": "預設",
+  "targets": {
+   "zh-CN": "默认"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-network-cn",
+  "kind": "variant_term",
+  "sourceTerm": "网络",
+  "targets": {
+   "zh-TW": "網路",
+   "zh-HK": "網絡",
+   "zh-Hant": "網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-network-tw",
+  "kind": "variant_term",
+  "sourceTerm": "網路",
+  "targets": {
+   "zh-CN": "网络",
+   "zh-HK": "網絡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-network-hk",
+  "kind": "variant_term",
+  "sourceTerm": "網絡",
+  "targets": {
+   "zh-CN": "网络",
+   "zh-TW": "網路",
+   "zh-Hant": "網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-internet-cn",
+  "kind": "variant_term",
+  "sourceTerm": "互联网",
+  "targets": {
+   "zh-TW": "網際網路",
+   "zh-HK": "互聯網",
+   "zh-Hant": "網際網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-internet-tw",
+  "kind": "variant_term",
+  "sourceTerm": "網際網路",
+  "targets": {
+   "zh-CN": "互联网",
+   "zh-HK": "互聯網"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-internet-hk",
+  "kind": "variant_term",
+  "sourceTerm": "互聯網",
+  "targets": {
+   "zh-CN": "互联网",
+   "zh-TW": "網際網路",
+   "zh-Hant": "網際網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-lan-cn",
+  "kind": "variant_term",
+  "sourceTerm": "局域网",
+  "targets": {
+   "zh-TW": "區域網路",
+   "zh-HK": "區域網絡",
+   "zh-Hant": "區域網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-lan-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "局域網",
+  "targets": {
+   "zh-CN": "局域网",
+   "zh-TW": "區域網路",
+   "zh-HK": "區域網絡",
+   "zh-Hant": "區域網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-lan-tw",
+  "kind": "variant_term",
+  "sourceTerm": "區域網路",
+  "targets": {
+   "zh-CN": "局域网",
+   "zh-HK": "區域網絡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-lan-hk",
+  "kind": "variant_term",
+  "sourceTerm": "區域網絡",
+  "targets": {
+   "zh-CN": "局域网",
+   "zh-TW": "區域網路",
+   "zh-Hant": "區域網路"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-broadband-cn",
+  "kind": "variant_term",
+  "sourceTerm": "宽带",
+  "targets": {
+   "zh-TW": "寬頻",
+   "zh-HK": "寬頻",
+   "zh-Hant": "寬頻"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-broadband-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "寬帶",
+  "targets": {
+   "zh-CN": "宽带",
+   "zh-TW": "寬頻",
+   "zh-HK": "寬頻",
+   "zh-Hant": "寬頻"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-broadband-tw",
+  "kind": "variant_term",
+  "sourceTerm": "寬頻",
+  "targets": {
+   "zh-CN": "宽带"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-database-cn",
+  "kind": "variant_term",
+  "sourceTerm": "数据库",
+  "targets": {
+   "zh-TW": "資料庫",
+   "zh-HK": "數據庫",
+   "zh-Hant": "資料庫"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-database-tw",
+  "kind": "variant_term",
+  "sourceTerm": "資料庫",
+  "targets": {
+   "zh-CN": "数据库",
+   "zh-HK": "數據庫"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-database-hk",
+  "kind": "variant_term",
+  "sourceTerm": "數據庫",
+  "targets": {
+   "zh-CN": "数据库",
+   "zh-TW": "資料庫",
+   "zh-Hant": "資料庫"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-server-cn",
+  "kind": "variant_term",
+  "sourceTerm": "服务器",
+  "targets": {
+   "zh-TW": "伺服器",
+   "zh-HK": "伺服器",
+   "zh-Hant": "伺服器"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-server-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "服務器",
+  "targets": {
+   "zh-CN": "服务器",
+   "zh-TW": "伺服器",
+   "zh-HK": "伺服器",
+   "zh-Hant": "伺服器"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-server-tw",
+  "kind": "variant_term",
+  "sourceTerm": "伺服器",
+  "targets": {
+   "zh-CN": "服务器"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-hardware-cn",
+  "kind": "variant_term",
+  "sourceTerm": "硬件",
+  "targets": {
+   "zh-TW": "硬體",
+   "zh-Hant": "硬體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-hardware-tw",
+  "kind": "variant_term",
+  "sourceTerm": "硬體",
+  "targets": {
+   "zh-CN": "硬件",
+   "zh-HK": "硬件"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-harddisk-cn",
+  "kind": "variant_term",
+  "sourceTerm": "硬盘",
+  "targets": {
+   "zh-TW": "硬碟",
+   "zh-HK": "硬碟",
+   "zh-Hant": "硬碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-harddisk-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "硬盤",
+  "targets": {
+   "zh-CN": "硬盘",
+   "zh-TW": "硬碟",
+   "zh-HK": "硬碟",
+   "zh-Hant": "硬碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-harddisk-tw",
+  "kind": "variant_term",
+  "sourceTerm": "硬碟",
+  "targets": {
+   "zh-CN": "硬盘"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-usbdrive-cn",
+  "kind": "variant_term",
+  "sourceTerm": "U盘",
+  "targets": {
+   "zh-TW": "隨身碟",
+   "zh-HK": "USB手指",
+   "zh-Hant": "隨身碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-usbdrive-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "U盤",
+  "targets": {
+   "zh-CN": "U盘",
+   "zh-TW": "隨身碟",
+   "zh-HK": "USB手指",
+   "zh-Hant": "隨身碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-usbdrive-tw",
+  "kind": "variant_term",
+  "sourceTerm": "隨身碟",
+  "targets": {
+   "zh-CN": "U盘",
+   "zh-HK": "USB手指"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-usbdrive-hk",
+  "kind": "variant_term",
+  "sourceTerm": "USB手指",
+  "targets": {
+   "zh-CN": "U盘",
+   "zh-TW": "隨身碟",
+   "zh-Hant": "隨身碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-optical-cn",
+  "kind": "variant_term",
+  "sourceTerm": "光盘",
+  "targets": {
+   "zh-TW": "光碟",
+   "zh-HK": "光碟",
+   "zh-Hant": "光碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-optical-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "光盤",
+  "targets": {
+   "zh-CN": "光盘",
+   "zh-TW": "光碟",
+   "zh-HK": "光碟",
+   "zh-Hant": "光碟"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-optical-tw",
+  "kind": "variant_term",
+  "sourceTerm": "光碟",
+  "targets": {
+   "zh-CN": "光盘"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-chip-cn",
+  "kind": "variant_term",
+  "sourceTerm": "芯片",
+  "targets": {
+   "zh-TW": "晶片",
+   "zh-HK": "晶片",
+   "zh-Hant": "晶片"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-chip-tw",
+  "kind": "variant_term",
+  "sourceTerm": "晶片",
+  "targets": {
+   "zh-CN": "芯片"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-gpu-cn",
+  "kind": "variant_term",
+  "sourceTerm": "显卡",
+  "targets": {
+   "zh-TW": "顯示卡",
+   "zh-HK": "顯示卡",
+   "zh-Hant": "顯示卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-gpu-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "顯卡",
+  "targets": {
+   "zh-CN": "显卡",
+   "zh-TW": "顯示卡",
+   "zh-HK": "顯示卡",
+   "zh-Hant": "顯示卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-gpu-tw",
+  "kind": "variant_term",
+  "sourceTerm": "顯示卡",
+  "targets": {
+   "zh-CN": "显卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-motherboard-cn",
+  "kind": "variant_term",
+  "sourceTerm": "主板",
+  "targets": {
+   "zh-TW": "主機板",
+   "zh-Hant": "主機板"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-motherboard-tw",
+  "kind": "variant_term",
+  "sourceTerm": "主機板",
+  "targets": {
+   "zh-CN": "主板",
+   "zh-HK": "主板"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-nic-cn",
+  "kind": "variant_term",
+  "sourceTerm": "网卡",
+  "targets": {
+   "zh-TW": "網路卡",
+   "zh-HK": "網卡",
+   "zh-Hant": "網路卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-nic-tw",
+  "kind": "variant_term",
+  "sourceTerm": "網路卡",
+  "targets": {
+   "zh-CN": "网卡",
+   "zh-HK": "網卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-nic-hk",
+  "kind": "variant_term",
+  "sourceTerm": "網卡",
+  "targets": {
+   "zh-CN": "网卡",
+   "zh-TW": "網路卡",
+   "zh-Hant": "網路卡"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-printer-cn",
+  "kind": "variant_term",
+  "sourceTerm": "打印机",
+  "targets": {
+   "zh-TW": "印表機",
+   "zh-HK": "打印機",
+   "zh-Hant": "印表機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-printer-tw",
+  "kind": "variant_term",
+  "sourceTerm": "印表機",
+  "targets": {
+   "zh-CN": "打印机",
+   "zh-HK": "打印機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-printer-hk",
+  "kind": "variant_term",
+  "sourceTerm": "打印機",
+  "targets": {
+   "zh-CN": "打印机",
+   "zh-TW": "印表機",
+   "zh-Hant": "印表機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-print-cn",
+  "kind": "variant_term",
+  "sourceTerm": "打印",
+  "targets": {
+   "zh-TW": "列印",
+   "zh-Hant": "列印"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-print-tw",
+  "kind": "variant_term",
+  "sourceTerm": "列印",
+  "targets": {
+   "zh-CN": "打印",
+   "zh-HK": "打印"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-screen-cn",
+  "kind": "variant_term",
+  "sourceTerm": "屏幕",
+  "targets": {
+   "zh-TW": "螢幕",
+   "zh-Hant": "螢幕"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-screen-tw",
+  "kind": "variant_term",
+  "sourceTerm": "螢幕",
+  "targets": {
+   "zh-CN": "屏幕",
+   "zh-HK": "屏幕"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cursor-cn",
+  "kind": "variant_term",
+  "sourceTerm": "光标",
+  "targets": {
+   "zh-TW": "游標",
+   "zh-HK": "光標",
+   "zh-Hant": "游標"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cursor-tw",
+  "kind": "variant_term",
+  "sourceTerm": "游標",
+  "targets": {
+   "zh-CN": "光标",
+   "zh-HK": "光標"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cursor-hk",
+  "kind": "variant_term",
+  "sourceTerm": "光標",
+  "targets": {
+   "zh-CN": "光标",
+   "zh-TW": "游標",
+   "zh-Hant": "游標"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-folder-cn",
+  "kind": "variant_term",
+  "sourceTerm": "文件夹",
+  "targets": {
+   "zh-TW": "資料夾",
+   "zh-HK": "文件夾",
+   "zh-Hant": "資料夾"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-folder-tw",
+  "kind": "variant_term",
+  "sourceTerm": "資料夾",
+  "targets": {
+   "zh-CN": "文件夹",
+   "zh-HK": "文件夾"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-folder-hk",
+  "kind": "variant_term",
+  "sourceTerm": "文件夾",
+  "targets": {
+   "zh-CN": "文件夹",
+   "zh-TW": "資料夾",
+   "zh-Hant": "資料夾"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-os-cn",
+  "kind": "variant_term",
+  "sourceTerm": "操作系统",
+  "targets": {
+   "zh-TW": "作業系統",
+   "zh-HK": "操作系統",
+   "zh-Hant": "作業系統"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-os-tw",
+  "kind": "variant_term",
+  "sourceTerm": "作業系統",
+  "targets": {
+   "zh-CN": "操作系统",
+   "zh-HK": "操作系統"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-os-hk",
+  "kind": "variant_term",
+  "sourceTerm": "操作系統",
+  "targets": {
+   "zh-CN": "操作系统",
+   "zh-TW": "作業系統",
+   "zh-Hant": "作業系統"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-font-cn",
+  "kind": "variant_term",
+  "sourceTerm": "字体",
+  "targets": {
+   "zh-TW": "字型",
+   "zh-HK": "字體",
+   "zh-Hant": "字型"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-paste-cn",
+  "kind": "variant_term",
+  "sourceTerm": "粘贴",
+  "targets": {
+   "zh-TW": "貼上",
+   "zh-HK": "貼上",
+   "zh-Hant": "貼上"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-paste-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "粘貼",
+  "targets": {
+   "zh-CN": "粘贴",
+   "zh-TW": "貼上",
+   "zh-HK": "貼上",
+   "zh-Hant": "貼上"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-paste-tw",
+  "kind": "variant_term",
+  "sourceTerm": "貼上",
+  "targets": {
+   "zh-CN": "粘贴"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-search-cn",
+  "kind": "variant_term",
+  "sourceTerm": "搜索",
+  "targets": {
+   "zh-TW": "搜尋",
+   "zh-HK": "搜尋",
+   "zh-Hant": "搜尋"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-search-tw",
+  "kind": "variant_term",
+  "sourceTerm": "搜尋",
+  "targets": {
+   "zh-CN": "搜索"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-link-cn",
+  "kind": "variant_term",
+  "sourceTerm": "链接",
+  "targets": {
+   "zh-TW": "連結",
+   "zh-HK": "連結",
+   "zh-Hant": "連結"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-link-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "鏈接",
+  "targets": {
+   "zh-CN": "链接",
+   "zh-TW": "連結",
+   "zh-HK": "連結",
+   "zh-Hant": "連結"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-blog-cn",
+  "kind": "variant_term",
+  "sourceTerm": "博客",
+  "targets": {
+   "zh-TW": "部落格",
+   "zh-HK": "網誌",
+   "zh-Hant": "部落格"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-blog-tw",
+  "kind": "variant_term",
+  "sourceTerm": "部落格",
+  "targets": {
+   "zh-CN": "博客",
+   "zh-HK": "網誌"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-blog-hk",
+  "kind": "variant_term",
+  "sourceTerm": "網誌",
+  "targets": {
+   "zh-CN": "博客",
+   "zh-TW": "部落格",
+   "zh-Hant": "部落格"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-programmer-cn",
+  "kind": "variant_term",
+  "sourceTerm": "程序员",
+  "targets": {
+   "zh-TW": "程式設計師",
+   "zh-HK": "程式員",
+   "zh-Hant": "程式設計師"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-programmer-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "程序員",
+  "targets": {
+   "zh-CN": "程序员",
+   "zh-TW": "程式設計師",
+   "zh-HK": "程式員",
+   "zh-Hant": "程式設計師"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-programmer-tw",
+  "kind": "variant_term",
+  "sourceTerm": "程式設計師",
+  "targets": {
+   "zh-CN": "程序员",
+   "zh-HK": "程式員"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-programmer-hk",
+  "kind": "variant_term",
+  "sourceTerm": "程式員",
+  "targets": {
+   "zh-CN": "程序员",
+   "zh-TW": "程式設計師",
+   "zh-Hant": "程式設計師"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cloud-cn",
+  "kind": "variant_term",
+  "sourceTerm": "云计算",
+  "targets": {
+   "zh-TW": "雲端運算",
+   "zh-HK": "雲端運算",
+   "zh-Hant": "雲端運算"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cloud-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "雲計算",
+  "targets": {
+   "zh-CN": "云计算",
+   "zh-TW": "雲端運算",
+   "zh-HK": "雲端運算",
+   "zh-Hant": "雲端運算"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-cloud-tw",
+  "kind": "variant_term",
+  "sourceTerm": "雲端運算",
+  "targets": {
+   "zh-CN": "云计算"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-ai-cn",
+  "kind": "variant_term",
+  "sourceTerm": "人工智能",
+  "targets": {
+   "zh-TW": "人工智慧",
+   "zh-Hant": "人工智慧"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-ai-tw",
+  "kind": "variant_term",
+  "sourceTerm": "人工智慧",
+  "targets": {
+   "zh-CN": "人工智能",
+   "zh-HK": "人工智能"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-social-cn",
+  "kind": "variant_term",
+  "sourceTerm": "社交媒体",
+  "targets": {
+   "zh-TW": "社群媒體",
+   "zh-HK": "社交媒體",
+   "zh-Hant": "社群媒體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-social-tw",
+  "kind": "variant_term",
+  "sourceTerm": "社群媒體",
+  "targets": {
+   "zh-CN": "社交媒体",
+   "zh-HK": "社交媒體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-social-hk",
+  "kind": "variant_term",
+  "sourceTerm": "社交媒體",
+  "targets": {
+   "zh-CN": "社交媒体",
+   "zh-TW": "社群媒體",
+   "zh-Hant": "社群媒體"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-hd-cn",
+  "kind": "variant_term",
+  "sourceTerm": "高清",
+  "targets": {
+   "zh-TW": "高畫質",
+   "zh-Hant": "高畫質"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-hd-tw",
+  "kind": "variant_term",
+  "sourceTerm": "高畫質",
+  "targets": {
+   "zh-CN": "高清",
+   "zh-HK": "高清"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-smartphone-cn",
+  "kind": "variant_term",
+  "sourceTerm": "智能手机",
+  "targets": {
+   "zh-TW": "智慧型手機",
+   "zh-HK": "智能手機",
+   "zh-Hant": "智慧型手機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-smartphone-tw",
+  "kind": "variant_term",
+  "sourceTerm": "智慧型手機",
+  "targets": {
+   "zh-CN": "智能手机",
+   "zh-HK": "智能手機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-smartphone-hk",
+  "kind": "variant_term",
+  "sourceTerm": "智能手機",
+  "targets": {
+   "zh-CN": "智能手机",
+   "zh-TW": "智慧型手機",
+   "zh-Hant": "智慧型手機"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laptop-cn",
+  "kind": "variant_term",
+  "sourceTerm": "笔记本电脑",
+  "targets": {
+   "zh-TW": "筆記型電腦",
+   "zh-HK": "手提電腦",
+   "zh-Hant": "筆記型電腦"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laptop-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "筆記本電腦",
+  "targets": {
+   "zh-CN": "笔记本电脑",
+   "zh-TW": "筆記型電腦",
+   "zh-HK": "手提電腦",
+   "zh-Hant": "筆記型電腦"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laptop-tw",
+  "kind": "variant_term",
+  "sourceTerm": "筆記型電腦",
+  "targets": {
+   "zh-CN": "笔记本电脑",
+   "zh-HK": "手提電腦"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laptop-hk",
+  "kind": "variant_term",
+  "sourceTerm": "手提電腦",
+  "targets": {
+   "zh-CN": "笔记本电脑",
+   "zh-TW": "筆記型電腦",
+   "zh-Hant": "筆記型電腦"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-sms-cn",
+  "kind": "variant_term",
+  "sourceTerm": "短信",
+  "targets": {
+   "zh-TW": "簡訊",
+   "zh-HK": "短訊",
+   "zh-Hant": "簡訊"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-sms-tw",
+  "kind": "variant_term",
+  "sourceTerm": "簡訊",
+  "targets": {
+   "zh-CN": "短信",
+   "zh-HK": "短訊"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-sms-hk",
+  "kind": "variant_term",
+  "sourceTerm": "短訊",
+  "targets": {
+   "zh-CN": "短信",
+   "zh-TW": "簡訊",
+   "zh-Hant": "簡訊"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laser-cn",
+  "kind": "variant_term",
+  "sourceTerm": "激光",
+  "targets": {
+   "zh-TW": "雷射",
+   "zh-Hant": "雷射"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-laser-tw",
+  "kind": "variant_term",
+  "sourceTerm": "雷射",
+  "targets": {
+   "zh-CN": "激光",
+   "zh-HK": "激光"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-user-cn",
+  "kind": "variant_term",
+  "sourceTerm": "用户",
+  "targets": {
+   "zh-TW": "使用者",
+   "zh-HK": "用戶",
+   "zh-Hant": "使用者"
+  },
+  "safe": false,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-bus-cn",
+  "kind": "variant_term",
+  "sourceTerm": "公交车",
+  "targets": {
+   "zh-TW": "公車",
+   "zh-HK": "巴士",
+   "zh-Hant": "公車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-bus-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "公交車",
+  "targets": {
+   "zh-CN": "公交车",
+   "zh-TW": "公車",
+   "zh-HK": "巴士",
+   "zh-Hant": "公車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-bicycle-cn",
+  "kind": "variant_term",
+  "sourceTerm": "自行车",
+  "targets": {
+   "zh-TW": "腳踏車",
+   "zh-HK": "單車",
+   "zh-Hant": "腳踏車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-bicycle-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "自行車",
+  "targets": {
+   "zh-CN": "自行车",
+   "zh-TW": "腳踏車",
+   "zh-HK": "單車",
+   "zh-Hant": "腳踏車"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-pineapple-cn",
+  "kind": "variant_term",
+  "sourceTerm": "菠萝",
+  "targets": {
+   "zh-TW": "鳳梨",
+   "zh-HK": "菠蘿",
+   "zh-Hant": "鳳梨"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-tomato-cn",
+  "kind": "variant_term",
+  "sourceTerm": "西红柿",
+  "targets": {
+   "zh-TW": "番茄",
+   "zh-HK": "番茄",
+   "zh-Hant": "番茄"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-tomato-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "西紅柿",
+  "targets": {
+   "zh-CN": "西红柿",
+   "zh-TW": "番茄",
+   "zh-HK": "番茄",
+   "zh-Hant": "番茄"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-instant-noodle-cn",
+  "kind": "variant_term",
+  "sourceTerm": "方便面",
+  "targets": {
+   "zh-TW": "泡麵",
+   "zh-HK": "即食麵",
+   "zh-Hant": "泡麵"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-instant-noodle-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "方便麪",
+  "targets": {
+   "zh-CN": "方便面",
+   "zh-TW": "泡麵",
+   "zh-HK": "即食麵",
+   "zh-Hant": "泡麵"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-instant-noodle-tw",
+  "kind": "variant_term",
+  "sourceTerm": "泡麵",
+  "targets": {
+   "zh-CN": "方便面",
+   "zh-HK": "即食麵"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-instant-noodle-hk",
+  "kind": "variant_term",
+  "sourceTerm": "即食麵",
+  "targets": {
+   "zh-CN": "方便面",
+   "zh-TW": "泡麵",
+   "zh-Hant": "泡麵"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-aircon-cn",
+  "kind": "variant_term",
+  "sourceTerm": "空调",
+  "targets": {
+   "zh-TW": "冷氣",
+   "zh-HK": "冷氣",
+   "zh-Hant": "冷氣"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-aircon-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "空調",
+  "targets": {
+   "zh-CN": "空调",
+   "zh-TW": "冷氣",
+   "zh-HK": "冷氣",
+   "zh-Hant": "冷氣"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-kindergarten-cn",
+  "kind": "variant_term",
+  "sourceTerm": "幼儿园",
+  "targets": {
+   "zh-TW": "幼稚園",
+   "zh-HK": "幼稚園",
+   "zh-Hant": "幼稚園"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-kindergarten-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "幼兒園",
+  "targets": {
+   "zh-CN": "幼儿园",
+   "zh-TW": "幼稚園",
+   "zh-HK": "幼稚園",
+   "zh-Hant": "幼稚園"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-new-zealand-cn",
+  "kind": "variant_term",
+  "sourceTerm": "新西兰",
+  "targets": {
+   "zh-TW": "紐西蘭",
+   "zh-HK": "新西蘭",
+   "zh-Hant": "紐西蘭"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-new-zealand-tw",
+  "kind": "variant_term",
+  "sourceTerm": "紐西蘭",
+  "targets": {
+   "zh-CN": "新西兰",
+   "zh-HK": "新西蘭"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-new-zealand-hk",
+  "kind": "variant_term",
+  "sourceTerm": "新西蘭",
+  "targets": {
+   "zh-CN": "新西兰",
+   "zh-TW": "紐西蘭",
+   "zh-Hant": "紐西蘭"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-sydney-cn",
+  "kind": "variant_term",
+  "sourceTerm": "悉尼",
+  "targets": {
+   "zh-TW": "雪梨",
+   "zh-Hant": "雪梨"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-italy-cn",
+  "kind": "variant_term",
+  "sourceTerm": "意大利",
+  "targets": {
+   "zh-TW": "義大利",
+   "zh-Hant": "義大利"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-italy-tw",
+  "kind": "variant_term",
+  "sourceTerm": "義大利",
+  "targets": {
+   "zh-CN": "意大利",
+   "zh-HK": "意大利"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-australia-cn",
+  "kind": "variant_term",
+  "sourceTerm": "澳大利亚",
+  "targets": {
+   "zh-TW": "澳洲",
+   "zh-HK": "澳洲",
+   "zh-Hant": "澳洲"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ },
+ {
+  "id": "term-australia-cn-trad",
+  "kind": "variant_term",
+  "sourceTerm": "澳大利亞",
+  "targets": {
+   "zh-CN": "澳大利亚",
+   "zh-TW": "澳洲",
+   "zh-HK": "澳洲",
+   "zh-Hant": "澳洲"
+  },
+  "safe": true,
+  "enabled": true,
+  "priority": 600,
+  "source": "builtin"
+ }
+]

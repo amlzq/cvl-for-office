@@ -1,11 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MAX_IMPORT_FILE_BYTES,
   MAX_PHRASES_PER_VARIANT,
+  PHRASE_PAGE_SIZE,
   VARIANT_LABELS,
   buildPhraseTemplateCsv,
   decodePhraseFile,
   exportPhrases,
+  filterPhrases,
   importPhrases,
   normalizeDictionary,
   parsePhraseFile,
@@ -38,10 +40,29 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
   const [target, setTarget] = useState("");
   const [allowText, setAllowText] = useState("");
   const [note, setNote] = useState("");
+  const [query, setQuery] = useState("");
+  const [visible, setVisible] = useState(PHRASE_PAGE_SIZE);
   const fileInput = useRef<HTMLInputElement>(null);
 
+  // 切换写法后清空搜索并回到第一批，避免看到上一写法的过滤结果。
+  useEffect(() => {
+    setQuery("");
+    setVisible(PHRASE_PAGE_SIZE);
+  }, [variant]);
+
   const phrases = dictionary.phrases.filter((entry) => entry.variant === variant);
+  const matched = filterPhrases(phrases, query, (entry) => [entry.source, entry.target]);
+  const shown = matched.slice(0, visible);
   const allowed = dictionary.allowed.filter((entry) => entry.variant === variant);
+
+  const clearPhrases = () => {
+    if (phrases.length === 0) return;
+    if (!window.confirm(`清空「${VARIANT_LABELS[variant]}」下的全部自定义词组？`)) return;
+    onChange({ ...dictionary, phrases: dictionary.phrases.filter((e) => e.variant !== variant) });
+    setQuery("");
+    setVisible(PHRASE_PAGE_SIZE);
+    setNote("已清空该写法的自定义词组。");
+  };
 
   const addPhrase = () => {
     if (source.trim() === target.trim()) {
@@ -108,9 +129,38 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
         <input aria-label="替换为" placeholder="替换为" value={target} onChange={(e) => setTarget(e.target.value)} />
         <button disabled={!source.trim() || !target.trim()} onClick={addPhrase}>添加</button>
       </div>
+      {phrases.length > PHRASE_PAGE_SIZE && (
+        <div className="pair">
+          <input
+            aria-label="搜索词组"
+            placeholder="搜索原词或替换词"
+            value={query}
+            onChange={(event) => {
+              setQuery(event.target.value);
+              setVisible(PHRASE_PAGE_SIZE);
+            }}
+          />
+          <span className="msg">
+            {query ? `${matched.length} / ${phrases.length}` : `共 ${phrases.length} 条`}
+          </span>
+        </div>
+      )}
       <ul className="plain">
-        {phrases.map((entry) => (
-          <li key={entry.source}>
+        {shown.map((entry) => (
+          <li key={entry.source} className={entry.enabled === false ? "off" : undefined}>
+            <input
+              type="checkbox"
+              aria-label="启用该词组"
+              checked={entry.enabled !== false}
+              onChange={(event) =>
+                onChange({
+                  ...dictionary,
+                  phrases: dictionary.phrases.map((e) =>
+                    e === entry ? { ...e, enabled: event.target.checked } : e,
+                  ),
+                })
+              }
+            />
             <span className="src">{entry.source}</span>
             <span className="arrow">→</span>
             <span className="dst">{entry.target}</span>
@@ -123,6 +173,12 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
           </li>
         ))}
       </ul>
+      {matched.length > shown.length && (
+        <button className="link" onClick={() => setVisible((n) => n + PHRASE_PAGE_SIZE)}>
+          显示更多（剩余 {matched.length - shown.length}）
+        </button>
+      )}
+      {query && matched.length === 0 && <div className="msg">没有匹配的词组。</div>}
 
       <label>允许词：这个词本身不再报告，词内的简繁字形也不再报告</label>
       <div className="pair">
@@ -153,6 +209,9 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
         </button>
         <button onClick={() => downloadTextFile("custom-phrases-template.csv", buildPhraseTemplateCsv())}>
           下载模板
+        </button>
+        <button disabled={phrases.length === 0} onClick={clearPhrases}>
+          清空（{phrases.length}）
         </button>
       </div>
       <input

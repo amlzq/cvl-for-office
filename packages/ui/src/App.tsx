@@ -17,11 +17,9 @@ import {
 import { DictionaryPanel } from "./DictionaryPanel";
 import {
   loadDictionary,
-  loadIgnored,
   loadPrefs,
   loadSettings,
   saveDictionary,
-  saveIgnored,
   savePrefs,
   saveSettings,
   type Prefs,
@@ -42,7 +40,8 @@ function errorText(error: unknown): string {
 
 export function App({ host }: { host: HostAdapter }) {
   const [settings, setSettings] = useState<DetectSettings>(loadSettings);
-  const [ignored, setIgnored] = useState<Set<string>>(loadIgnored);
+  // 忽略只在本次面板会话内有效；永久不提示请用「允许」。
+  const [ignored, setIgnored] = useState<Set<string>>(() => new Set());
   const [prefs, setPrefs] = useState<Prefs>(loadPrefs);
   const [dictionary, setDictionary] = useState<UserDictionary>(loadDictionary);
   /** 已在文档中用高亮标出的位置。 */
@@ -59,6 +58,10 @@ export function App({ host }: { host: HostAdapter }) {
 
   const scan = useCallback(
     async (target: ScanScope, note?: string) => {
+      if (!latest.current.prefs.enabled) {
+        setStatus({ kind: "info", text: "检查已关闭。勾选上方「启用检查」后再试，或到「用户词典」临时处理单条。" });
+        return;
+      }
       setStatus({ kind: "busy", text: `正在扫描${SCOPE_LABEL[target]}…` });
       try {
         const { settings, ignored, prefs, dictionary } = latest.current;
@@ -163,21 +166,17 @@ export function App({ host }: { host: HostAdapter }) {
   );
 
   const ignore = useCallback((item: LocatedIssue) => {
-    setIgnored((previous) => {
-      const next = new Set(previous).add(item.ignoreKey);
-      saveIgnored(next);
-      return next;
-    });
+    // 与另两端一致：忽略只在本次会话内有效，不写本地存储。
+    setIgnored((previous) => new Set(previous).add(item.ignoreKey));
     setIssues((previous) => previous.filter((entry) => entry.key !== item.key));
   }, []);
 
   const clearIgnored = useCallback(() => {
     const empty = new Set<string>();
     latest.current = { ...latest.current, ignored: empty };
-    saveIgnored(empty);
     setIgnored(empty);
     if (scope) {
-      void scan(scope, "已清除忽略项。");
+      void scan(scope, "已恢复本次忽略的项。");
     }
   }, [scan, scope]);
 
@@ -220,6 +219,16 @@ export function App({ host }: { host: HostAdapter }) {
     <div className="cvl">
       <style>{CSS}</style>
       <h1>CVL · 中文用字检查</h1>
+
+      <h2 className="group">检查设置</h2>
+      <label className="check">
+        <input
+          type="checkbox"
+          checked={prefs.enabled}
+          onChange={(event) => setPrefs({ ...prefs, enabled: event.target.checked })}
+        />
+        启用检查
+      </label>
 
       <label htmlFor="cvl-variant">文档应使用</label>
       <select
@@ -300,7 +309,7 @@ export function App({ host }: { host: HostAdapter }) {
             </span>
             <button
               disabled={busy || safeItems.length === 0}
-              title="只替换高置信度的问题；标有「需确认」的请逐条处理"
+              title="只替换高置信度项；标有「需确认」的请逐条处理"
               onClick={() => void replace(safeItems)}
             >
               全部替换（{safeItems.length}）
@@ -365,13 +374,21 @@ export function App({ host }: { host: HostAdapter }) {
 
       <DictionaryPanel variant={settings.variant} dictionary={dictionary} onChange={setDictionary} />
 
+      <details className="dict">
+        <summary>关于 · 隐私</summary>
+        <div className="msg">CVL 中文用字检查 v0.1 · MIT License</div>
+        <div className="msg">检查全部在本机完成，文档内容不会上传；没有网络请求、遥测或账号。</div>
+        <div className="msg">设置与用户词典保存在本机 localStorage，可用词典页的「导出」迁移到其他设备。</div>
+        <div className="msg">字形转换基于 OpenCC，术语规则与浏览器扩展版、macOS 版共用同一套。</div>
+      </details>
+
       <div className="foot">
         点击条目可在文档中定位。检查在本机完成，文档内容不会上传。v0.1
         {ignored.size > 0 && (
           <>
             {" · "}
             <button className="link" onClick={clearIgnored}>
-              清除已忽略项（{ignored.size}）
+              恢复本次忽略（{ignored.size}）
             </button>
           </>
         )}

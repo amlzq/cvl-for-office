@@ -10,8 +10,6 @@ import {
 } from "@cvl/core";
 
 const SETTINGS_KEY = "cvl.settings.v1";
-const IGNORED_KEY = "cvl.ignored.v1";
-const IGNORED_LIMIT = 1000;
 
 function read(key: string): unknown {
   try {
@@ -42,30 +40,24 @@ export function saveSettings(settings: DetectSettings): void {
   write(SETTINGS_KEY, settings);
 }
 
-export function loadIgnored(): Set<string> {
-  const stored = read(IGNORED_KEY);
-  return new Set(Array.isArray(stored) ? stored.filter((v): v is string => typeof v === "string") : []);
-}
-
-export function saveIgnored(ignored: ReadonlySet<string>): void {
-  write(IGNORED_KEY, [...ignored].slice(-IGNORED_LIMIT));
-}
-
 const PREFS_KEY = "cvl.prefs.v1";
 const DICTIONARY_KEY = "cvl.dictionary.v1";
 
 export interface Prefs extends ScanOptions {
   /** 替换时以修订（Track Changes）方式写入。 */
   trackChanges: boolean;
+  /** 总开关：关闭后所有扫描入口都不执行，与另两端的「启用检查」一致。 */
+  enabled: boolean;
 }
 
-export const DEFAULT_PREFS: Prefs = { ...DEFAULT_SCAN_OPTIONS, trackChanges: false };
+export const DEFAULT_PREFS: Prefs = { ...DEFAULT_SCAN_OPTIONS, trackChanges: false, enabled: true };
 
 export function loadPrefs(): Prefs {
   const stored = read(PREFS_KEY) as Partial<Prefs> | undefined;
   const pick = (key: keyof Prefs) =>
     typeof stored?.[key] === "boolean" ? stored[key]! : DEFAULT_PREFS[key];
   return {
+    enabled: pick("enabled"),
     trackChanges: pick("trackChanges"),
     headerFooter: pick("headerFooter"),
     notes: pick("notes"),

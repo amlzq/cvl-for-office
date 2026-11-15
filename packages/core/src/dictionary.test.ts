@@ -31,6 +31,17 @@ describe("user dictionary detection", () => {
     expect(detectText("甲方公司", { ...tw, level: "relaxed" }, dictionary)).toEqual([]);
   });
 
+  it("disabled phrases stay in the dictionary but stop matching", () => {
+    const dictionary = normalizeDictionary({
+      phrases: [{ variant: "zh-TW", source: "甲方公司", target: "甲方", enabled: false }],
+    });
+    expect(dictionary.phrases[0].enabled).toBe(false);
+    expect(detectText("甲方公司已確認", tw, dictionary)).toEqual([]);
+
+    const enabled = normalizeDictionary({ phrases: [{ variant: "zh-TW", source: "甲方公司", target: "甲方" }] });
+    expect(enabled.phrases[0].enabled).toBe(true);
+  });
+
   it("does not report an allowed word or script changes inside it", () => {
     expect(detectText("请使用软件", tw).length).toBeGreaterThan(0);
     const dictionary = normalizeDictionary({ allowed: [{ variant: "zh-TW", text: "软件" }] });

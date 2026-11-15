@@ -2,9 +2,11 @@ import { describe, expect, it } from "vitest";
 import { normalizeDictionary } from "./dictionary";
 import {
   MAX_PHRASES_PER_VARIANT,
+  PHRASE_PAGE_SIZE,
   buildPhraseTemplateCsv,
   decodePhraseFile,
   exportPhrases,
+  filterPhrases,
   importPhrases,
   parsePhraseFile,
   serializePhraseCsv,
@@ -68,11 +70,24 @@ describe("importPhrases / exportPhrases", () => {
     ]);
     expect(result).toMatchObject({ added: 1, updated: 1, skipped: 0 });
     expect(result.dictionary.phrases).toEqual([
-      { variant: "zh-TW", source: "软件", target: "軟體" },
-      { variant: "zh-HK", source: "软件", target: "軟件" },
-      { variant: "zh-TW", source: "视频", target: "影片" },
+      { variant: "zh-TW", source: "软件", target: "軟體", enabled: true },
+      { variant: "zh-HK", source: "软件", target: "軟件", enabled: true },
+      { variant: "zh-TW", source: "视频", target: "影片", enabled: true },
     ]);
     expect(result.dictionary.allowed).toEqual(base.allowed);
+  });
+
+  it("keeps a disabled phrase disabled when its replacement is updated", () => {
+    const dict = normalizeDictionary({
+      phrases: [{ variant: "zh-TW", source: "软件", target: "軟件", enabled: false }],
+    });
+    const result = importPhrases(dict, "zh-TW", [{ from: "软件", to: "軟體" }]);
+    expect(result.dictionary.phrases[0]).toEqual({
+      variant: "zh-TW",
+      source: "软件",
+      target: "軟體",
+      enabled: false,
+    });
   });
 
   it("stops adding at the per-variant limit but still updates", () => {
@@ -85,5 +100,30 @@ describe("importPhrases / exportPhrases", () => {
 
   it("exports only the chosen variant in from,to format", () => {
     expect(exportPhrases(base, "zh-HK")).toBe("﻿from,to\r\n软件,軟件\r\n");
+  });
+});
+
+describe("filterPhrases / PHRASE_PAGE_SIZE", () => {
+  const items = [
+    { source: "软件", target: "軟體" },
+    { source: "视频", target: "影片" },
+    { source: "Mouse", target: "滑鼠" },
+  ];
+  const columns = (item: (typeof items)[number]) => [item.source, item.target] as const;
+
+  it("空查询返回全部", () => {
+    expect(filterPhrases(items, "  ", columns)).toEqual(items);
+  });
+
+  it("按原词匹配，忽略大小写", () => {
+    expect(filterPhrases(items, "mouse", columns)).toEqual([items[2]]);
+  });
+
+  it("按替换词匹配", () => {
+    expect(filterPhrases(items, "影片", columns)).toEqual([items[1]]);
+  });
+
+  it("每批 100 条，与扩展版一致", () => {
+    expect(PHRASE_PAGE_SIZE).toBe(100);
   });
 });
