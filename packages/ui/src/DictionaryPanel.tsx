@@ -3,7 +3,6 @@ import {
   MAX_IMPORT_FILE_BYTES,
   MAX_PHRASES_PER_VARIANT,
   PHRASE_PAGE_SIZE,
-  VARIANT_LABELS,
   buildPhraseTemplateCsv,
   decodePhraseFile,
   exportPhrases,
@@ -14,6 +13,7 @@ import {
   type UserDictionary,
   type VariantCode,
 } from "@cvl/core";
+import { t, variantLabel, type Lang } from "./i18n";
 
 function downloadTextFile(filename: string, text: string): void {
   const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
@@ -31,11 +31,12 @@ function downloadTextFile(filename: string, text: string): void {
 interface Props {
   variant: VariantCode;
   dictionary: UserDictionary;
+  lang: Lang;
   onChange: (dictionary: UserDictionary) => void;
 }
 
 /** 用户词典：按「文档应使用」的写法分别存放，只显示并生效于当前选择的写法。 */
-export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
+export function DictionaryPanel({ variant, dictionary, lang, onChange }: Props) {
   const [source, setSource] = useState("");
   const [target, setTarget] = useState("");
   const [allowText, setAllowText] = useState("");
@@ -57,16 +58,18 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
 
   const clearPhrases = () => {
     if (phrases.length === 0) return;
-    if (!window.confirm(`清空「${VARIANT_LABELS[variant]}」下的全部自定义词组？`)) return;
+    if (!window.confirm(t(lang, "dict.clearConfirm", { variant: variantLabel(lang, variant) }))) {
+      return;
+    }
     onChange({ ...dictionary, phrases: dictionary.phrases.filter((e) => e.variant !== variant) });
     setQuery("");
     setVisible(PHRASE_PAGE_SIZE);
-    setNote("已清空该写法的自定义词组。");
+    setNote(t(lang, "dict.cleared"));
   };
 
   const addPhrase = () => {
     if (source.trim() === target.trim()) {
-      setNote("请输入不同的两个词。");
+      setNote(t(lang, "dict.sameWords"));
       return;
     }
     onChange(
@@ -96,44 +99,64 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
 
   const importFile = async (file: File) => {
     if (file.size > MAX_IMPORT_FILE_BYTES) {
-      setNote(`文件过大，请选择 ${Math.round(MAX_IMPORT_FILE_BYTES / 1024)} KB 以内的文件。`);
+      setNote(t(lang, "dict.fileTooBig", { kb: Math.round(MAX_IMPORT_FILE_BYTES / 1024) }));
       return;
     }
     let text: string;
     try {
       text = decodePhraseFile(await file.arrayBuffer());
     } catch {
-      setNote("文件读取失败。");
+      setNote(t(lang, "dict.readFailed"));
       return;
     }
     const { dictionary: next, added, updated, skipped } = importPhrases(dictionary, variant, parsePhraseFile(text));
     if (added + updated > 0) onChange(next);
     setNote(
       added + updated + skipped === 0
-        ? "文件中没有可导入的词组。"
-        : `已导入到「${VARIANT_LABELS[variant]}」：新增 ${added} 条，更新 ${updated} 条` +
-            (skipped > 0 ? `，已达上限 ${MAX_PHRASES_PER_VARIANT} 条，${skipped} 条未导入` : "") +
-            "。",
+        ? t(lang, "dict.importEmpty")
+        : t(lang, "dict.importDone", {
+            variant: variantLabel(lang, variant),
+            added,
+            updated,
+          }) +
+            (skipped > 0
+              ? t(lang, "dict.importSkipped", { max: MAX_PHRASES_PER_VARIANT, skipped })
+              : "") +
+            t(lang, "note.end"),
     );
   };
 
   return (
     <details className="dict">
-      <summary>用户词典（{phrases.length + allowed.length}）</summary>
-      <div className="msg">当前写法：{VARIANT_LABELS[variant]}。词典按写法分别存放，仅对该写法生效。</div>
+      <summary>{t(lang, "dict.summary", { count: phrases.length + allowed.length })}</summary>
+      <div className="msg">
+        {t(lang, "dict.current", { variant: variantLabel(lang, variant) })}
+      </div>
 
-      <label>自定义词组：命中左侧时建议替换为右侧</label>
+      <label>{t(lang, "dict.phraseLabel")}</label>
       <div className="pair">
-        <input aria-label="原词" placeholder="原词" value={source} onChange={(e) => setSource(e.target.value)} />
+        <input
+          aria-label={t(lang, "dict.from")}
+          placeholder={t(lang, "dict.from")}
+          value={source}
+          onChange={(e) => setSource(e.target.value)}
+        />
         <span className="arrow">→</span>
-        <input aria-label="替换为" placeholder="替换为" value={target} onChange={(e) => setTarget(e.target.value)} />
-        <button disabled={!source.trim() || !target.trim()} onClick={addPhrase}>添加</button>
+        <input
+          aria-label={t(lang, "dict.to")}
+          placeholder={t(lang, "dict.to")}
+          value={target}
+          onChange={(e) => setTarget(e.target.value)}
+        />
+        <button disabled={!source.trim() || !target.trim()} onClick={addPhrase}>
+          {t(lang, "dict.add")}
+        </button>
       </div>
       {phrases.length > PHRASE_PAGE_SIZE && (
         <div className="pair">
           <input
-            aria-label="搜索词组"
-            placeholder="搜索原词或替换词"
+            aria-label={t(lang, "dict.searchLabel")}
+            placeholder={t(lang, "dict.searchPlaceholder")}
             value={query}
             onChange={(event) => {
               setQuery(event.target.value);
@@ -141,7 +164,9 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
             }}
           />
           <span className="msg">
-            {query ? `${matched.length} / ${phrases.length}` : `共 ${phrases.length} 条`}
+            {query
+              ? `${matched.length} / ${phrases.length}`
+              : t(lang, "dict.count", { count: phrases.length })}
           </span>
         </div>
       )}
@@ -150,7 +175,7 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
           <li key={entry.source} className={entry.enabled === false ? "off" : undefined}>
             <input
               type="checkbox"
-              aria-label="启用该词组"
+              aria-label={t(lang, "dict.enable")}
               checked={entry.enabled !== false}
               onChange={(event) =>
                 onChange({
@@ -168,22 +193,29 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
               className="link"
               onClick={() => onChange({ ...dictionary, phrases: dictionary.phrases.filter((e) => e !== entry) })}
             >
-              删除
+              {t(lang, "dict.delete")}
             </button>
           </li>
         ))}
       </ul>
       {matched.length > shown.length && (
         <button className="link" onClick={() => setVisible((n) => n + PHRASE_PAGE_SIZE)}>
-          显示更多（剩余 {matched.length - shown.length}）
+          {t(lang, "dict.showMore", { count: matched.length - shown.length })}
         </button>
       )}
-      {query && matched.length === 0 && <div className="msg">没有匹配的词组。</div>}
+      {query && matched.length === 0 && <div className="msg">{t(lang, "dict.noMatch")}</div>}
 
-      <label>允许词：这个词本身不再报告，词内的简繁字形也不再报告</label>
+      <label>{t(lang, "dict.allowedLabel")}</label>
       <div className="pair">
-        <input aria-label="允许词" placeholder="允许词" value={allowText} onChange={(e) => setAllowText(e.target.value)} />
-        <button disabled={!allowText.trim()} onClick={addAllowed}>添加</button>
+        <input
+          aria-label={t(lang, "dict.allowWord")}
+          placeholder={t(lang, "dict.allowWord")}
+          value={allowText}
+          onChange={(e) => setAllowText(e.target.value)}
+        />
+        <button disabled={!allowText.trim()} onClick={addAllowed}>
+          {t(lang, "dict.add")}
+        </button>
       </div>
       <ul className="plain">
         {allowed.map((entry) => (
@@ -193,25 +225,25 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
               className="link"
               onClick={() => onChange({ ...dictionary, allowed: dictionary.allowed.filter((e) => e !== entry) })}
             >
-              删除
+              {t(lang, "dict.delete")}
             </button>
           </li>
         ))}
       </ul>
 
       <div className="row">
-        <button onClick={() => fileInput.current?.click()}>导入</button>
+        <button onClick={() => fileInput.current?.click()}>{t(lang, "dict.import")}</button>
         <button
           disabled={phrases.length === 0}
           onClick={() => downloadTextFile(`custom-phrases-${variant}.csv`, exportPhrases(dictionary, variant))}
         >
-          导出
+          {t(lang, "dict.export")}
         </button>
         <button onClick={() => downloadTextFile("custom-phrases-template.csv", buildPhraseTemplateCsv())}>
-          下载模板
+          {t(lang, "dict.template")}
         </button>
         <button disabled={phrases.length === 0} onClick={clearPhrases}>
-          清空（{phrases.length}）
+          {t(lang, "dict.clear", { count: phrases.length })}
         </button>
       </div>
       <input
@@ -225,10 +257,7 @@ export function DictionaryPanel({ variant, dictionary, onChange }: Props) {
           if (file) void importFile(file);
         }}
       />
-      <div className="msg">
-        导入导出只针对当前写法的自定义词组，不含允许词。支持 CSV（两列 from,to）和 OpenCC 词条（原词⇥目标词）格式，
-        与浏览器扩展、macOS 版通用。
-      </div>
+      <div className="msg">{t(lang, "dict.importHint")}</div>
       {note && <div className="msg" role="status">{note}</div>}
     </details>
   );

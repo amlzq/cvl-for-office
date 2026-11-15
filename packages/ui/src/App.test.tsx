@@ -24,6 +24,19 @@ describe("App", () => {
     expect(html).toContain("隐私");
   });
 
+  it("Office 显示语言为英文时首屏英文", () => {
+    const globals = globalThis as { Office?: unknown };
+    globals.Office = { context: { displayLanguage: "en-US" } };
+    try {
+      const html = renderToString(<App host={fakeHost} />);
+      expect(html).toContain("Scan whole document");
+      expect(html).toContain("Enable checking");
+      expect(html).toContain("User dictionary");
+    } finally {
+      globals.Office = undefined;
+    }
+  });
+
   it("host segments flow into scan results", async () => {
     const segments = await fakeHost.readSegments("document");
     const found = scanSegments(segments, { ...DEFAULT_SETTINGS, variant: "zh-TW" });

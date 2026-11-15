@@ -8,6 +8,7 @@ import {
   type ScanOptions,
   type UserDictionary,
 } from "@cvl/core";
+import type { LangPref } from "./i18n";
 
 const SETTINGS_KEY = "cvl.settings.v1";
 
@@ -48,19 +49,32 @@ export interface Prefs extends ScanOptions {
   trackChanges: boolean;
   /** 总开关：关闭后所有扫描入口都不执行，与另两端的「启用检查」一致。 */
   enabled: boolean;
+  /** 界面语言；`auto` 跟随 Office 显示语言。 */
+  language: LangPref;
 }
 
-export const DEFAULT_PREFS: Prefs = { ...DEFAULT_SCAN_OPTIONS, trackChanges: false, enabled: true };
+export const DEFAULT_PREFS: Prefs = {
+  ...DEFAULT_SCAN_OPTIONS,
+  trackChanges: false,
+  enabled: true,
+  language: "auto",
+};
+
+const LANG_PREFS: readonly LangPref[] = ["auto", "zh-Hans", "zh-Hant", "en"];
 
 export function loadPrefs(): Prefs {
   const stored = read(PREFS_KEY) as Partial<Prefs> | undefined;
-  const pick = (key: keyof Prefs) =>
-    typeof stored?.[key] === "boolean" ? stored[key]! : DEFAULT_PREFS[key];
+  type BoolKey = "enabled" | "trackChanges" | "headerFooter" | "notes";
+  const pick = (key: BoolKey): boolean =>
+    typeof stored?.[key] === "boolean" ? (stored[key] as boolean) : DEFAULT_PREFS[key];
   return {
     enabled: pick("enabled"),
     trackChanges: pick("trackChanges"),
     headerFooter: pick("headerFooter"),
     notes: pick("notes"),
+    language: LANG_PREFS.includes(stored?.language as LangPref)
+      ? (stored!.language as LangPref)
+      : DEFAULT_PREFS.language,
   };
 }
 
